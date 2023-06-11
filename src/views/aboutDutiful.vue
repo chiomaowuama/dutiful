@@ -71,9 +71,27 @@ import whiteNav from '@/components/whiteNav.vue'
                 Our mission is to grow to the nation’s most convenient platform where vendors can advertise and customers can discover and connect with them within the same location.</p>
             </div>
         </div>
-        <div>
-            <div class="dutiful-third-text"></div>
-            <div class="dutiful-third-image"></div>
+        <div class="dutiful-third">
+            <div class="dutiful-third-text">
+                <h3>Who we are</h3>
+                <p>We’re a platform motivated to help businesses thrive with ease with the use of professional marketing and sales enablement tactics.
+                We’re a proud and dutiful platform. We pride ourselves in using geolocation for easy accessibility and transaction so as to complete the chain of distribution which reads: “production is not complete until it reaches the final consumer”.</p>
+                <p>Our team is made up of smart and business-oriented professionals that are passionate about creating positive sales outcome.</p>
+            </div>
+            <div class="dutiful-third-image">
+                <!-- <img src="@/assets/confrence.png" alt=""> -->
+            </div>
+        </div>
+        <div class="dutiful-third">
+            <div class="dutiful-third-image-1">
+                <!-- <img src="@/assets/confrence.png" alt=""> -->
+            </div>
+            <div class="dutiful-third-text">
+                <h3>Who we are</h3>
+                <p>We’re a platform motivated to help businesses thrive with ease with the use of professional marketing and sales enablement tactics.
+                We’re a proud and dutiful platform. We pride ourselves in using geolocation for easy accessibility and transaction so as to complete the chain of distribution which reads: “production is not complete until it reaches the final consumer”.</p>
+                <p>Our team is made up of smart and business-oriented professionals that are passionate about creating positive sales outcome.</p>
+            </div>
         </div>
     </div>
     <footerpage/>
@@ -201,5 +219,246 @@ color: #656565;
     color: #1E1E4B;
     padding-top:3%;
 }
+/* the third section */
+.dutiful-third{
+    /* border:2px solid green; */
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
+    /* align-content: center; */
+    padding:5%;
+}
+/* .dutiful-third-text{
+    border:2px solid yellow;
+} */
+.dutiful-third-text h3{
+    font-family: 'Recoleta Alt';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 33px;
+    /* identical to box height, or 92% */
+    color: #1E1E4B;
+    margin-bottom: 5%;
+}
+.dutiful-third-text p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 143.02%;
+/* or 34px */
 
+text-align: justify;
+
+color: #656565;
+}
+/* .dutiful-third-image{
+    border:2px solid blue;
+
+} */
+.dutiful-third-image {
+    background: url("@/assets/confrence.png");
+    /* border: 4px solid #A16AE8; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 3.49144px 17.4572px rgba(169, 169, 169, 0.25));
+    border-radius: 12px;
+    /* width:80%; */
+
+}
+.dutiful-third-image-1{
+    background: url("@/assets/hands.png");
+    /* border: 4px solid #A16AE8; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 3.49144px 17.4572px rgba(169, 169, 169, 0.25));
+    border-radius: 12px;
+    /* width:80%; */
+}
+@media screen and (max-width: 900px){
+    .dutiful-first{
+    background-color:#532F82;
+    padding:3%;
+}
+.dutiful-head h3{
+    font-family: 'Recoleta Alt';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+.dutiful-head svg{
+    text-align: center;
+    /* border:2px  solid green; */
+    width:100%;
+}
+.dutiful-image-and-text{
+    /* border:2px solid green; */
+   margin-top: 3%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+    /* padding:5%; */
+  
+}
+.dutiful-image-and-text p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 143.02%;
+/* or 34px */
+text-align: justify;
+color: #EDDFFF;
+margin-bottom: 5%;
+/* border:2px solid green; */
+width:95%;
+margin-left:auto;
+
+
+}
+.dutiful-image-and-text img{
+    width:80%;
+    margin:auto;
+}
+
+.dutifulsvg-and-p p{
+    position: relative;
+}
+.dutifulsvg-and-p svg{
+    /* border:2px solid blue; */
+    position: absolute;
+    top:370px;
+    left:25%;
+    width:75%;
+    
+}
+.dutiful-headimg{
+    /* border:2px solid yellow; */
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+.dutiful-headimg img{
+    /* border:2px solid green; */
+    position: relative;
+    width:83%;
+}
+.first-dutiful{
+    /* border:2px solid green; */
+    margin-top:5%;
+}
+/* the second part */
+.mission-pleantynote{
+    /* border:2px solid green; */
+    padding:5%;
+    display:grid;
+    grid-template-columns: 3fr 9fr;
+}
+.dutiful-plentynote{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 143.02%;
+/* or 31px */
+/* border:2px solid blue; */
+text-align: justify;
+color: #656565;
+}
+.dutiful-plentynote p{
+    /* border:2px solid green; */
+    margin-bottom: 5%;
+}
+
+.ourmission-ps{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    padding-top:5%;
+}
+.dutiful-purple{
+    color: #A16AE8;
+    padding-top:3%;
+    border:1px solid #A16AE8;
+    width:50%;
+    margin:auto;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+}
+.dutiful-black{
+    color: #1E1E4B;
+    padding-top:3%;
+}
+/* the third section */
+.dutiful-third{
+    /* border:2px solid green; */
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
+    /* align-content: center; */
+    padding:5%;
+}
+/* .dutiful-third-text{
+    border:2px solid yellow;
+} */
+.dutiful-third-text h3{
+    font-family: 'Recoleta Alt';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 33px;
+    /* identical to box height, or 92% */
+    color: #1E1E4B;
+    margin-bottom: 5%;
+}
+.dutiful-third-text p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 143.02%;
+/* or 34px */
+
+text-align: justify;
+
+color: #656565;
+}
+/* .dutiful-third-image{
+    border:2px solid blue;
+
+} */
+.dutiful-third-image {
+    background: url("@/assets/confrence.png");
+    /* border: 4px solid #A16AE8; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 3.49144px 17.4572px rgba(169, 169, 169, 0.25));
+    border-radius: 12px;
+    /* width:80%; */
+
+}
+.dutiful-third-image-1{
+    background: url("@/assets/hands.png");
+    /* border: 4px solid #A16AE8; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 3.49144px 17.4572px rgba(169, 169, 169, 0.25));
+    border-radius: 12px;
+    /* width:80%; */
+}
+}
 </style>

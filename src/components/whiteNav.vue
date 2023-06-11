@@ -158,7 +158,6 @@ label.logo{
     width:100%;
     height:auto;
     background-color:rgba(241, 229, 229, 0.132);
-    border:2px solid red;
     overflow:auto;
     top:80px;
     left:-100%;
