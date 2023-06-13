@@ -82,15 +82,13 @@ import whiteNav from '@/components/whiteNav.vue'
                 <!-- <img src="@/assets/confrence.png" alt=""> -->
             </div>
         </div>
-        <div class="dutiful-third">
+        <div class="dutiful-third one">
             <div class="dutiful-third-image-1">
                 <!-- <img src="@/assets/confrence.png" alt=""> -->
             </div>
             <div class="dutiful-third-text">
                 <h3>Who we are</h3>
-                <p>We’re a platform motivated to help businesses thrive with ease with the use of professional marketing and sales enablement tactics.
-                We’re a proud and dutiful platform. We pride ourselves in using geolocation for easy accessibility and transaction so as to complete the chain of distribution which reads: “production is not complete until it reaches the final consumer”.</p>
-                <p>Our team is made up of smart and business-oriented professionals that are passionate about creating positive sales outcome.</p>
+                <p>We’re proud that every month we help people to share more, waste less and find the thing that they need most. We’re all about making connections which is why you’ll find that we’re a team that values collaboration, an open, inclusive and honest culture and a team that believes in supporting each other and our communities.</p>
             </div>
         </div>
     </div>
@@ -287,7 +285,7 @@ color: #656565;
     font-family: 'Recoleta Alt';
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 26px;
     line-height: 49px;
     /* identical to box height */
     text-align: center;
@@ -297,12 +295,13 @@ color: #656565;
     text-align: center;
     /* border:2px  solid green; */
     width:100%;
+
 }
 .dutiful-image-and-text{
     /* border:2px solid green; */
    margin-top: 3%;
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     gap:1rem;
     /* padding:5%; */
   
@@ -311,15 +310,15 @@ color: #656565;
     font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 18px;
 line-height: 143.02%;
 /* or 34px */
 text-align: justify;
 color: #EDDFFF;
 margin-bottom: 5%;
 /* border:2px solid green; */
-width:95%;
-margin-left:auto;
+width:90%;
+margin:auto;
 
 
 }
@@ -337,6 +336,7 @@ margin-left:auto;
     top:370px;
     left:25%;
     width:75%;
+    display:none;
     
 }
 .dutiful-headimg{
@@ -359,7 +359,7 @@ margin-left:auto;
     /* border:2px solid green; */
     padding:5%;
     display:grid;
-    grid-template-columns: 3fr 9fr;
+    grid-template-columns: 1fr;
 }
 .dutiful-plentynote{
     font-family: 'Inter';
@@ -386,12 +386,15 @@ color: #656565;
     line-height: 33px;
     text-align: center;
     padding-top:5%;
+    margin:0% 0% 10% 0%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 }
 .dutiful-purple{
     color: #A16AE8;
     padding-top:3%;
     border:1px solid #A16AE8;
-    width:50%;
+    width:100%;
     margin:auto;
     border-left:none;
     border-right:none;
@@ -405,7 +408,7 @@ color: #656565;
 .dutiful-third{
     /* border:2px solid green; */
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:1fr  ;
     /* justify-content: center; */
     /* align-content: center; */
     padding:5%;
@@ -427,10 +430,10 @@ color: #656565;
     font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 24px;
+font-size: 20px;
 line-height: 143.02%;
 /* or 34px */
-
+margin-bottom: 5%;
 text-align: justify;
 
 color: #656565;
@@ -447,7 +450,8 @@ color: #656565;
     background-repeat: no-repeat;
     filter: drop-shadow(0px 3.49144px 17.4572px rgba(169, 169, 169, 0.25));
     border-radius: 12px;
-    /* width:80%; */
+    width:100%;
+    height:250px;
 
 }
 .dutiful-third-image-1{
@@ -459,6 +463,13 @@ color: #656565;
     filter: drop-shadow(0px 3.49144px 17.4572px rgba(169, 169, 169, 0.25));
     border-radius: 12px;
     /* width:80%; */
+    width:100%;
+    height:250px;
+}
+.one{
+    /* border:2px solid yellow; */
+    display:flex;
+    flex-direction: column-reverse;
 }
 }
 </style>

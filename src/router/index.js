@@ -1,4 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import promotingdutiful from '../views/promotingdutiful.vue'
+import otpsendingpage from '../views/otpsendingpage.vue'
+import otppage from '../views/otppage.vue'
+import forgotpassword from '../views/forgotpassword.vue'
+import resetpassword from '../views/resetpassword.vue'
+import loginpage from '../views/loginpage.vue'
+import getstarted from '../views/getstarted.vue'
 import aboutDutiful from '../views/aboutDutiful.vue'
 import AboutView from '../views/AboutView.vue'
 import homePage from '../views/homePage.vue'
@@ -20,6 +27,41 @@ const router = createRouter({
       path: '/aboutDutiful',
       name: 'aboutDutiful',
       component: aboutDutiful
+    },
+    {
+      path: '/getstarted',
+      name: 'getstarted',
+      component: getstarted
+    },
+    {
+      path: '/loginpage',
+      name: 'loginpage',
+      component:loginpage
+    },
+    {
+      path: '/forgotpassword',
+      name: 'forgotpassword',
+      component:forgotpassword
+    },
+    {
+      path: '/resetpassword',
+      name: 'resetpassword',
+      component:resetpassword
+    },
+    {
+      path: '/otppage',
+      name: 'otppage',
+      component:otppage
+    },
+    {
+      path: '/otpsendingpage',
+      name: 'otpsendingpage',
+      component:otpsendingpage
+    },
+    {
+      path: '/promotingdutiful',
+      name: 'promotingdutiful',
+      component:promotingdutiful
     },
    
     // {
