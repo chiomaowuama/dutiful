@@ -1,4 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import blogpage from '../views/blogpage.vue'
+import askedquestion from '../views/askedquestion.vue'
+import getintouch from '../views/getintouch.vue'
 import promotingdutiful from '../views/promotingdutiful.vue'
 import otpsendingpage from '../views/otpsendingpage.vue'
 import otppage from '../views/otppage.vue'
@@ -63,6 +66,22 @@ const router = createRouter({
       name: 'promotingdutiful',
       component:promotingdutiful
     },
+    {
+      path: '/getintouch',
+      name: 'getintouch',
+      component:getintouch
+    },
+    {
+      path: '/askedquestion',
+      name: 'askedquestion',
+      component:askedquestion
+    },
+    {
+      path: '/blogpage',
+      name: 'blogpage',
+      component:blogpage
+    },
+    
    
     // {
     //   path: '/homepages',

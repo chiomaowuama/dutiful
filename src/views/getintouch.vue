@@ -114,7 +114,7 @@ color: #FFFFFF;
 .the-customers-support{
     /* border:2px solid yellow; */
     margin-top:-5%;
-  
+    margin-bottom:-5%;
     display:flex;
     justify-content: space-around;
     align-content: center;
@@ -178,7 +178,7 @@ color: #656565;
     border:2px solid yellow;
 } */
 .getstarted-form{
-    /* border:2px solid yel/low; */
+    /* border:2px solid yellow; */
     display:grid;
     gap:1rem;
     width:40%;
