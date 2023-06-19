@@ -26,12 +26,13 @@
 
                 </a>
             </li>
-            <li><a href="#">Business Directory</a></li>
+            <li><RouterLink to="/">BUSINESS DIRECTORY</RouterLink></li>
             <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a class="active" href="#">Login</a></li>
-            <li><a href="#" class="li-border">signup</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><RouterLink to="/blogpage">Blog</RouterLink></li>
+                <li><RouterLink class="active" to="/loginpage">LOGIN</RouterLink></li>
+                <li><RouterLink to="/getstarted"  class="li-border">SIGNUP</RouterLink></li>
+
         </ul>
     </div>
 

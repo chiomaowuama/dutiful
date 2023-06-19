@@ -26,12 +26,12 @@
                         </svg>
                     </a>
                 </li>
-                <li><a class="active" href="#">Business Directory</a></li>
+                <li><RouterLink class="active" to="/">BUSINESS DIRECTORY</RouterLink></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class="li-border">signup</a></li>
+                <li><RouterLink to="/blogpage">Blog</RouterLink></li>
+                <li><RouterLink to="/loginpage">LOGIN</RouterLink></li>
+                <li><RouterLink to="/getstarted">SIGNUP</RouterLink></li>
             </ul>
         </div>
     

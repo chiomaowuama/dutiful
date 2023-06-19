@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import businessbudget from '../views/businessbudget.vue'
+import leadpage from '../views/leadpage.vue'
 import blogpage from '../views/blogpage.vue'
 import askedquestion from '../views/askedquestion.vue'
 import getintouch from '../views/getintouch.vue'
@@ -80,6 +82,16 @@ const router = createRouter({
       path: '/blogpage',
       name: 'blogpage',
       component:blogpage
+    },
+    {
+      path: '/leadpage',
+      name: 'leadpage',
+      component:leadpage
+    },
+    {
+      path: '/businessbudget',
+      name: 'businessbudget',
+      component:businessbudget
     },
     
    

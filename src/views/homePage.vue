@@ -30,7 +30,7 @@ import footerpage from '@/components/footerpage.vue'
           </div>
         </div>
         <div class="the-search-info">
-          <h3>WHY LIST WHITH DUTIFUl?</h3>
+          <h3>WHY LIST WITH DUTIFUl?</h3>
           <svg class="underline" width="219" height="22" viewBox="0 0 219 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M47.6638 4.47978C68.4665 3.83543 89.2805 3.4212 110.095 3.2371C130.909 3.053 151.53 3.11437 172.242 3.40586C184.008 3.57462 195.785 3.80474 207.551 4.11158L209.148 0.966528C182.287 1.59554 155.437 2.37796 128.587 3.31381C101.737 4.24965 74.8874 5.33891 48.0375 6.59693C32.9649 7.30265 17.9037 8.03905 2.83106 8.83682C1.94777 8.88285 0.622827 9.18968 0.124559 10.3556C-0.339736 11.4449 0.520908 12.0126 1.23434 11.9819C29.2166 11.0153 57.2215 10.9233 85.2151 11.7211C113.209 12.5188 141.18 14.2218 169.117 16.7992C184.812 18.2413 200.496 19.9749 216.158 21.9847C217.007 22.0921 218.411 21.5244 218.864 20.4658C219.362 19.3152 218.434 18.9163 217.754 18.8396C189.885 15.265 161.948 12.5649 133.989 10.7545C106.029 8.94421 78.0242 8.03905 50.0306 8.02371C34.3012 8.02371 18.5718 8.28452 2.84238 8.83682L1.24566 11.9819C28.0842 10.5551 54.934 9.29707 81.7838 8.17713C108.634 7.07252 135.484 6.106 162.333 5.30823C177.406 4.86332 192.49 4.44909 207.562 4.09623C208.446 4.08089 209.782 3.72803 210.269 2.57741C210.756 1.42678 209.861 0.966528 209.159 0.951186C188.334 0.429568 167.531 0.107392 146.717 0.0306837C125.903 -0.0460248 105.282 0.0920505 84.5696 0.475593C72.8037 0.690377 61.0265 0.981869 49.2606 1.35007C48.3773 1.38075 47.041 1.71827 46.5541 2.8689C46.0898 3.95816 46.9504 4.5258 47.6638 4.49512V4.47978Z" fill="#E2A4FF"/>
           </svg>
@@ -402,40 +402,69 @@ import footerpage from '@/components/footerpage.vue'
     </div>
     <div class="section-six">
       <div class=" section-five-four moving">
-        <div class="section-five-four-each">
+        <div class="section-five-four-each each-five">
            <div class="section-five-four-each-top">
               <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five">
-               <p>User Friendly</p>
+              <div class="smallie-five little-fivetext">
+               <p>Adeola fatoyinbo</p>
               </div>
-           </div>           
+           </div>
+           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+            </svg>           
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
           </div>
         <div class="section-five-four-each showing">
            <div class="section-five-four-each-top">
               <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five">
-               <p>User Friendly</p>
+              <div class="smallie-five little-fivetext">
+               <p>Adeola fatoyinbo</p>
               </div>
-           </div>           
+           </div> 
+           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+            </svg>
+          
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
         </div>
         <div class="section-five-four-each showing">
            <div class="section-five-four-each-top">
             <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five">
-               <p>User Friendly</p>
-              </div>
-           </div>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
-        </div>
-        <div class="section-five-four-each showing">
-           <div class="section-five-four-each-top">
-            <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five">
+              <div class="smallie-five little-fivetext">
                <p>Adeola fatoyinbo</p>
               </div>
            </div>
+           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+            </svg>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+        </div>
+        <div class="section-five-four-each showing">
+           <div class="section-five-four-each-top">
+            <img src="@/assets/dp.png" alt="">
+              <div class="smallie-five little-fivetext">
+               <p>Adeola fatoyinbo</p>
+              </div>
+           </div>
+           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+            </svg>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
         </div>
       </div>
@@ -984,7 +1013,7 @@ color: #6C6C6C;
 .section-five-four-each-top{
   /* border:2px solid red; */
   display:grid;
-  width:80%;
+  width:90%;
   margin:auto;
   grid-template-columns: 2fr 9fr;
 }
@@ -1021,6 +1050,25 @@ color: #6C6C6C;
 .moving{
   margin-top:2%;
   /* border:2px solid yellow; */
+}
+.showing svg{
+  /* border:2px solid green; */
+  margin-left:10%;
+  margin-top:5%;
+}
+.each svg{
+  /* border:2px solid green; */
+  margin-left:10%;
+  margin-top:5%;
+}
+.little-fivetext{
+  /* border:2px solid green; */
+  font-size: 10px;
+}
+.each-five svg{
+  /* border:2px solid yellow; */
+  margin-left:5%;
+  margin-top:5%;
 }
 @media screen and (max-width: 900px){
   .the-container{
