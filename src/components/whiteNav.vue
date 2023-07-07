@@ -27,8 +27,8 @@
                 </a>
             </li>
             <li><RouterLink to="/">BUSINESS DIRECTORY</RouterLink></li>
-            <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
+            <li><RouterLink to="/AboutView">Features</RouterLink></li>
+                <li><RouterLink to="/businessbudget">Pricing</RouterLink></li>
                 <li><RouterLink to="/blogpage">Blog</RouterLink></li>
                 <li><RouterLink class="active" to="/loginpage">LOGIN</RouterLink></li>
                 <li><RouterLink to="/getstarted"  class="li-border">SIGNUP</RouterLink></li>

@@ -5,21 +5,21 @@
   <div class="footer-one">
     <ul>
       <li class="footer-one-head">Comapny</li>
-      <li>About</li>
-      <li>Contact us</li>
-      <li>FAQs</li>
+      <li><RouterLink to="/aboutDutiful">About</RouterLink></li>
+      <li><RouterLink to="/getintouch">Contact us</RouterLink></li>
+      <li><RouterLink to="/askedquestion">FAQs</RouterLink></li>
     </ul>
     <ul>
       <li class="footer-one-head">Quick links</li>
       <li>find services</li>
-      <li>pricing & plans</li>
+      <li><RouterLink to="/businessbudget">pricing & plans</RouterLink></li>
       <li>List your business</li>
     </ul>
     <ul>
       <li class="footer-one-head">Resources</li>
-      <li>Blog</li>
-      <li>Affiliate Program</li>
-      <li>FAQs</li>
+      <li><RouterLink to="/blogpage">Blog</RouterLink></li>
+      <li><RouterLink to="/promotingdutiful">Affiliate Program</RouterLink></li>
+      <li><RouterLink to="/askedquestion">FAQs</RouterLink></li>
     </ul>
     <ul>
       <li class="footer-one-head">More from Dutiful</li>
@@ -98,6 +98,17 @@
   color: #B6B6E6;
   margin:2% 0;
   padding-left:20%;
+  /* border:2px solid green; */
+}
+.footer-one ul li a{
+  padding:0px 0;
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B6B6E6;
+
   /* border:2px solid green; */
 }
 .footer-one .footer-one-head{

@@ -30,7 +30,7 @@ import whiteNav from '@/components/whiteNav.vue'
                     <p>I agree to Dutiful's <span class="colored-span">terms and conditions</span></p>
                     </div>
                 </div>
-                <button class="getstarted-btn">Sign up</button>
+                <button class="getstarted-btn"><RouterLink to="/getstarted">Sign up</RouterLink></button>
                 <p class="signing-in">Already have an account? <RouterLink to="/loginpage">Login</RouterLink></p>
 
             </form>

@@ -7,7 +7,7 @@ import whiteNav from '@/components/whiteNav.vue'
 <template>
     <whiteNav/>
    <div class="getstated-container">
-        <p class="signup-message"> sign UP here</p>
+        <p class="signup-message"> sign up for free</p>
         <h3 class="started">Get started </h3>
         <div class="buttonsection" >
             <div class="button-section-inside">
@@ -36,7 +36,7 @@ import whiteNav from '@/components/whiteNav.vue'
                     </svg>
 
                     <p>Service provider</p>
-                    <svg class="click" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="click twice" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="19" cy="19" r="19" fill="#603F8B"/>
                     <path d="M25.7104 14.21C25.6175 14.1163 25.5069 14.0419 25.385 13.9911C25.2632 13.9403 25.1324 13.9142 25.0004 13.9142C24.8684 13.9142 24.7377 13.9403 24.6159 13.9911C24.494 14.0419 24.3834 14.1163 24.2904 14.21L16.8404 21.67L13.7104 18.53C13.6139 18.4368 13.5 18.3634 13.3751 18.3142C13.2503 18.265 13.1169 18.2409 12.9828 18.2432C12.8486 18.2456 12.7162 18.2743 12.5931 18.3278C12.47 18.3813 12.3587 18.4585 12.2654 18.555C12.1722 18.6515 12.0989 18.7655 12.0497 18.8903C12.0005 19.0152 11.9763 19.1485 11.9787 19.2827C11.981 19.4169 12.0097 19.5493 12.0632 19.6723C12.1167 19.7954 12.1939 19.9068 12.2904 20L16.1304 23.84C16.2234 23.9337 16.334 24.0081 16.4559 24.0589C16.5777 24.1097 16.7084 24.1358 16.8404 24.1358C16.9725 24.1358 17.1032 24.1097 17.225 24.0589C17.3469 24.0081 17.4575 23.9337 17.5504 23.84L25.7104 15.68C25.8119 15.5864 25.893 15.4727 25.9484 15.3462C26.0038 15.2197 26.0324 15.0831 26.0324 14.945C26.0324 14.8069 26.0038 14.6703 25.9484 14.5438C25.893 14.4173 25.8119 14.3036 25.7104 14.21Z" fill="white"/>
                     </svg>
@@ -45,7 +45,7 @@ import whiteNav from '@/components/whiteNav.vue'
         </div>
         <div class="getstarted-div-form">
             <form action="" class="getstarted-form">
-                <label for="">FULL name</label>
+                <label for="">Full name</label>
                 <input type="text">
                 <label for="">Email</label>
                 <input type="email">
@@ -125,12 +125,12 @@ import whiteNav from '@/components/whiteNav.vue'
 }
 .botton-section-inside1{
     /* border:2px solid blue; */
-    width:30%;
+    width:25%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5px;
+    padding: 5px 8px;
     box-sizing: border-box;
     position: relative;
     /* border: 1px solid #603F8B; */
@@ -141,20 +141,36 @@ import whiteNav from '@/components/whiteNav.vue'
     border: 1px solid #603F8B;
 }
 .botton-section-inside1 .click{
-    border:2px solid green;
+    /* border:2px solid green; */
     position: absolute;
     width:25%;
     top:-15px;
-    left:130px;
+    left:110px;
    display:none
 }
 .botton-section-inside1:hover .click{
-    border:2px solid yellow;
+    border:none;
    display:block;
-   border: 1px solid #603F8B;
+   /* border: 1px solid #603F8B; */
     
     
 }
+.first:hover{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.second{
+    /* border:2px solid green; */
+    width:29%;
+}
+.second:hover .click {
+    /* border:2px solid red; */
+    /* width:80%; */
+    padding:0px 0px;
+    left:115px;
+    
+}
+
 /* the form part */
 /* .getstarted-div-form{
     border:2px solid yellow;

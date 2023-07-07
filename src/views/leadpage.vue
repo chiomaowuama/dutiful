@@ -1,14 +1,30 @@
 <script setup>
 import footerpage from '@/components/footerpage.vue'
 import whiteNav from '@/components/whiteNav.vue'
+import {onMounted,ref } from 'vue';
 
+const alldetails = ref(null);
+
+
+async function blogdetails(){
+    let response = await fetch('https://testapi.dutiful.ng/v2/blog/how-to-start-the-new-year-with-huge-profit-margin-as-a-vendor/show');
+    let result = await response.json();
+
+    // console.log(result);
+    alldetails.value = result.data
+}
+
+onMounted(() => {
+    blogdetails();
+})
 </script>
+
 <template>
     <whiteNav/>
     <div class="lead-container">
         <div class="lead-firstsection">
             <p class="lead-firstsection-p">Leads generation</p>
-            <h3 class="lead-firstsection-h3">How to make your ads get you more leads</h3>
+            <h3 class="lead-firstsection-h3">{{ alldetails.title }}</h3>
             <div class="lead-svg-first">
                 <div class="calenda-lead">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,16 +67,14 @@ import whiteNav from '@/components/whiteNav.vue'
                 </div>
             </div>
             <div class="lead-secondsection-second">
-                <svg width="266" height="266" viewBox="0 0 266 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg width="266" height="266" viewBox="0 0 266 266" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M136.655 142.31C126.015 161.484 106.175 163.147 92.4321 145.968L89.9937 142.864C75.6962 124.909 55.5246 127.126 45.2171 147.63L26.1537 185.868C12.8537 212.468 32.2496 243.833 61.9529 243.833H203.376C232.082 243.833 251.478 214.463 240.173 187.973L205.482 106.954C193.734 79.4676 172.121 78.3592 157.602 104.516" stroke="white" stroke-width="16.625" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M110.508 55.4167C110.508 73.815 95.6561 88.6667 77.2578 88.6667C58.8595 88.6667 44.0078 73.815 44.0078 55.4167C44.0078 37.0183 58.8595 22.1667 77.2578 22.1667C81.2478 22.1667 85.0161 22.8317 88.452 24.1617" stroke="white" stroke-width="16.625" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                </svg> -->
+                <img :src="alldetails.image" alt="catImage" class="svg">
             </div>
             <div class="lead-secondsection-third">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare risus egestas ac luctus sed sit nunc nibh. Sapien eget mattis massa sit sapien et nibh. Ac sit vulputate amet elementum. Faucibus aenean aliquam morbi nibh aliquet feugiat velit cum. Donec quam porttitor quisque ultricies commodo. Diam a sed aliquam est vulputate nullam. Sit porttitor nisi, sed in condimentum. Mattis quis condimentum potenti magnis. Ullamcorper molestie platea ultrices adipiscing rhoncus mi etiam sagittis.</p>
-                <p>Mauris lacus, interdum iaculis malesuada. Iaculis adipiscing consequat turpis pellentesque auctor tellus lobortis ut leo. Vulputate amet tellus sed est ornare risus. Orci, laoreet sed interdum consequat massa. Eu quisque diam enim consectetur metus morbi et faucibus odio. In mus mauris elementum amet id. Donec ut libero vitae condimentum quam egestas amet. Pharetra vehicula aliquam duis eget mauris commodo suspendisse vestibulum, adipiscing. Molestie diam metus in quisque. Commodo, erat elementum, cursus tempus sit praesent in ut. Sed egestas non, sit ultricies. Tincidunt enim fermentum tortor sit amet.</p>
-                <p>Mi, sollicitudin diam risus, eu iaculis volutpat orci. Quisque morbi tristique tellus, ultrices sed amet neque. Facilisi enim viverra nec feugiat. Enim, mauris, quam vel proin sit maecenas diam. Venenatis, lectus amet, ut a neque. Cras nec proin purus faucibus neque, egestas ultrices nibh vulputate.</p>
-
+                <p v-html="alldetails.body"></p>
             </div>
             <div class="lead-secondsection-fourth">
                 <h3>Comments</h3>
@@ -97,6 +111,12 @@ import whiteNav from '@/components/whiteNav.vue'
                     <button>Post comment</button>
                 </div>
             </div>
+            <!-- <div>
+                <ul>
+                    <li v-for="(category, index) in alldetails?.categories" :key="index + 1">{{ category.name }}</li>
+                   
+                </ul>
+            </div> -->
 
         </div>
     </div>
@@ -198,12 +218,12 @@ color: #5C5C5C;
     display:flex;
     justify-content: center;
     align-items: center;
-    padding:9% 0;
+    padding:0% 0;
 }
-.lead-secondsection-second svg{
+.lead-secondsection-second .svg{
     /* border:2px solid yellow; */
-    width: 266px;
-    height: 266px;
+    width: 100%;
+    height: 100%;
 }
 /* second third */
 .lead-secondsection-third{
@@ -352,8 +372,8 @@ color: #603F8B;
 .lead-firstsection-h3{
     font-family: 'Circular Std';
 font-style: normal;
-font-weight: 500;
-font-size: 36px;
+font-weight: 700;
+font-size: 23px;
 line-height: 135%;
 /* identical to box height, or 49px */
 /* Text header color */
@@ -363,8 +383,9 @@ margin:1% 0;
 .lead-svg-first{
     /* border:2px solid red; */
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    width:40%;
+    grid-template-columns: 2fr 1fr;
+    width:100%;
+    margin:5% 0;
 }
 .calenda-lead{
     /* border:2px solid green; */
@@ -425,12 +446,13 @@ color: #5C5C5C;
     display:flex;
     justify-content: center;
     align-items: center;
-    padding:9% 0;
+    padding:0% 0;
+    margin:10% 0;
 }
-.lead-secondsection-second svg{
+.lead-secondsection-second .svg{
     /* border:2px solid yellow; */
-    width: 166px;
-    height: 166px;
+    width: 100%;
+    height: 10%;
 }
 /* second third */
 .lead-secondsection-third{

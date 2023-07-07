@@ -24,10 +24,10 @@ import whiteNav from '@/components/whiteNav.vue'
                 </div>
                 <div class="getstarted-check1">
                     <div class="for-p2">
-                    <p> <span class="colored-span">forgot password</span></p>
+                    <p> <span class="colored-span"><RouterLink to="/forgotpassword">forgot password</RouterLink></span></p>
                     </div>
                 </div>
-                <button class="getstarted-btn">Sign up</button>
+                <button class="getstarted-btn"><RouterLink to="/otppage">login page</RouterLink></button>
                 <p class="signing-in">Dont have an account? <RouterLink to="/getstarted">Sign Up</RouterLink></p>
 
             </form>
@@ -148,12 +148,13 @@ import whiteNav from '@/components/whiteNav.vue'
     /* grid-template-columns: 1fr; */
     justify-content:end;
     align-content: end;
+    background-color: white;
    
 }
 
 .getstarted-check p{
     /* border:2px solid green; */
-  margin:3% 0
+  margin:3% 0;
   
 }
 
@@ -166,6 +167,11 @@ import whiteNav from '@/components/whiteNav.vue'
 .colored-span{
     color: #603F8B;
     font-weight: 700;
+    background-color: white;
+}
+.colored-span a {
+    background-color: white;
+    color: #603F8B;
 }
 .getstarted-btn{
     background: #532F82;
@@ -183,6 +189,9 @@ color: #FFFFFF;
 height: 58px;
 /* left: 477px; */
 /* top: 1065px; */
+}
+.getstarted-btn a{
+    color: #FFFFFF;
 }
 .signing-in{
     font-family: 'Circular Std';
@@ -214,6 +223,10 @@ color: #A3B1BF;
     width:50px;
     top:18px;
     left:85%;
+}
+.for-p2 p{
+    background-color: white;
+
 }
 @media screen and (max-width: 900px){
     .getstated-container{

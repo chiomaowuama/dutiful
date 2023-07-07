@@ -19,7 +19,7 @@ import whiteNav from '@/components/whiteNav.vue'
               
 
                 <p class="signup-message2">An OTP has been sent to chioma12198@gmail.com.check your email to get the code.</p>
-                <button class="getstarted-btn">Next</button>
+                <button class="getstarted-btn"><RouterLink to="/otpsendingpage">Next</RouterLink></button>
             </form>
         </div>
    </div>

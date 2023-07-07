@@ -26,12 +26,12 @@
                         </svg>
                     </a>
                 </li>
-                <li><RouterLink class="active" to="/">BUSINESS DIRECTORY</RouterLink></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><RouterLink to="/blogpage">Blog</RouterLink></li>
-                <li><RouterLink to="/loginpage">LOGIN</RouterLink></li>
-                <li><RouterLink to="/getstarted">SIGNUP</RouterLink></li>
+                <li><RouterLink class="active brown" to="/">Business Directory</RouterLink></li>
+                <li><RouterLink to="/AboutView" class="brown">Features</RouterLink></li>
+                <li><RouterLink to="/businessbudget " class="brown">Pricing</RouterLink></li>
+                <li><RouterLink to="/blogpage" class="brown">Blog</RouterLink></li>
+                <li><RouterLink to="/loginpage">Login</RouterLink></li>
+                <li ><RouterLink to="/getstarted" class="li-border">Sign up</RouterLink></li>
             </ul>
         </div>
     
@@ -51,7 +51,7 @@ body{
 .nav{
     width:100%;
     background: #532F82;
-    height:80px;
+    height:70px;
     /* border:2px solid red; */
     position: fixed;
     z-index: 3;
@@ -68,24 +68,38 @@ label.logo{
 
 .nav ul{
     float:right;
-    margin-right:20px;
+    margin-right:10px;
+    margin-top:6px;
+    /* border:2px solid yellow; */
+
   
 }
 .nav ul li{
     display:inline-block;
-    line-height: 80px;
-    margin:0 5px;
+    line-height: 50px;
+    margin:0 20px;
+    /* border:2px solid yellow; */
 
 }
 .nav ul li a{
     color:white;
     font-size:17px;
-    padding:7px 13px;
+    padding:8px 15px;
     border-radius:3px;
-    text-transform:uppercase;
+    font-weight: 500;
+    
 }
-a.active, a:hover{
-    background:#61319f;
+.brown{
+    color:#CAB1EB;
+}
+a:hover{
+    /* background:#61319f; */
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border:1p solid #532F82;
+    font-size:17px;
+    font-weight: 500;
     transition:.5s;
 }
 .checkbtn{
@@ -100,10 +114,7 @@ a.active, a:hover{
 #check{
     display:none;
 }
-.li-border{
-    border:2px solid white;
 
-}
 .search{
     position:relative;
 }
@@ -131,7 +142,14 @@ a.active, a:hover{
     width:100%;
     height:25px;
 }
- 
+.li-border{
+    border:2px solid white;
+
+
+}
+.nav ul li a.brown{
+    color:#CAB1EB;
+}
 @media  screen and (max-width:1400px){
     label.logo{
         font-size:30px;

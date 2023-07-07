@@ -30,12 +30,12 @@ import footerpage from '@/components/footerpage.vue'
           </div>
         </div>
         <div class="the-search-info">
-          <h3>WHY LIST WITH DUTIFUl?</h3>
+          <h3>Why list with Dutiful?</h3>
           <svg class="underline" width="219" height="22" viewBox="0 0 219 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M47.6638 4.47978C68.4665 3.83543 89.2805 3.4212 110.095 3.2371C130.909 3.053 151.53 3.11437 172.242 3.40586C184.008 3.57462 195.785 3.80474 207.551 4.11158L209.148 0.966528C182.287 1.59554 155.437 2.37796 128.587 3.31381C101.737 4.24965 74.8874 5.33891 48.0375 6.59693C32.9649 7.30265 17.9037 8.03905 2.83106 8.83682C1.94777 8.88285 0.622827 9.18968 0.124559 10.3556C-0.339736 11.4449 0.520908 12.0126 1.23434 11.9819C29.2166 11.0153 57.2215 10.9233 85.2151 11.7211C113.209 12.5188 141.18 14.2218 169.117 16.7992C184.812 18.2413 200.496 19.9749 216.158 21.9847C217.007 22.0921 218.411 21.5244 218.864 20.4658C219.362 19.3152 218.434 18.9163 217.754 18.8396C189.885 15.265 161.948 12.5649 133.989 10.7545C106.029 8.94421 78.0242 8.03905 50.0306 8.02371C34.3012 8.02371 18.5718 8.28452 2.84238 8.83682L1.24566 11.9819C28.0842 10.5551 54.934 9.29707 81.7838 8.17713C108.634 7.07252 135.484 6.106 162.333 5.30823C177.406 4.86332 192.49 4.44909 207.562 4.09623C208.446 4.08089 209.782 3.72803 210.269 2.57741C210.756 1.42678 209.861 0.966528 209.159 0.951186C188.334 0.429568 167.531 0.107392 146.717 0.0306837C125.903 -0.0460248 105.282 0.0920505 84.5696 0.475593C72.8037 0.690377 61.0265 0.981869 49.2606 1.35007C48.3773 1.38075 47.041 1.71827 46.5541 2.8689C46.0898 3.95816 46.9504 4.5258 47.6638 4.49512V4.47978Z" fill="#E2A4FF"/>
           </svg>
 
-          <p>creating lead, drawing sales,  increasing visibility, owning a landing page for their business manageing project and many other things are challanges for many businesses in Nigeria.this is when Dutiful steps in Whats the videao to find more.</p>
+          <p>Creating leads, drawing sales, increasing visibility, owning a landing page for their business, managing projects, and many other things are challenges for many businesses in Nigeria. This is when Dutiful steps in. Watch the video to find out more.</p>
         </div>
       </div>
       <div class="the-rightside">
@@ -76,7 +76,7 @@ import footerpage from '@/components/footerpage.vue'
     <div class="section-two">
       <div class="second-section-text">
         <h3>Here's how to do it...</h3>
-        <p>In 4 simple steps, list your business and begin to gain leads and visibility</p>
+        <p>In 4 simple steps, list your business and begin to gain leads and visibility.</p>
       </div>
       <div class="theangle">
         <svg width="348" height="93" viewBox="0 0 348 93" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +105,7 @@ import footerpage from '@/components/footerpage.vue'
             <path opacity="0.4" d="M56.6666 30L46.2332 38.3333C42.7999 41.0667 37.1666 41.0667 33.7332 38.3333L23.3333 30" stroke="#532F82" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <path opacity="0.34" d="M50 61.4L58.0333 69.4667L74.1333 53.3334" stroke="#532F82" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p>To ensure the collection of accurate data, verify your email adress</p>
+            <p>To ensure the collection of accurate data,<span style="color:#464646; font-weight:550;">verify your email adress</span> </p>
             <svg width="157" class="under-text-1" height="142" viewBox="0 0 157 142" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M94.0006 159.333H47.3339C19.3339 159.333 0.667236 145.333 0.667236 112.667V47.3333C0.667236 14.6666 19.3339 0.666626 47.3339 0.666626H140.667C168.667 0.666626 187.334 14.6666 187.334 47.3333V75.3333" stroke="#ECF1F8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -141,7 +141,7 @@ import footerpage from '@/components/footerpage.vue'
             <path d="M32.3889 28.8889V51.1111" stroke="#532F82" stroke-width="2.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <path opacity="0.34" d="M32.3889 31.1111H44.8334C47.8334 31.1111 48.5 32.7778 46.3889 34.8889L45.0556 36.2222C44.1667 37.1111 44.1667 38.5555 45.0556 39.3333L46.3889 40.6666C48.5 42.7778 47.7223 44.4444 44.8334 44.4444H32.3889" stroke="#532F82" stroke-width="2.66667" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p>Make your listening active and voila! you are off to a new start</p>
+            <p>Make your listening active and <span style="color:#464646; font-weight:550;"> voila! </span> you are off to a new start</p>
             <svg width="139" class="under-text-1" height="156" viewBox="0 0 139 156" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M66.9081 2.8138L20.3348 20.3605C9.60146 24.3738 0.828125 37.0671 0.828125 48.4538V117.8C0.828125 128.814 8.10812 143.28 16.9748 149.907L57.1081 179.867C70.2681 189.76 91.9215 189.76 105.081 179.867L145.215 149.907C154.081 143.28 161.361 128.814 161.361 117.8V48.4538C161.361 36.9738 152.588 24.2805 141.855 20.2671L95.2815 2.8138C87.3481 -0.0795345 74.6548 -0.0795345 66.9081 2.8138Z" stroke="#ECF1F8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -246,7 +246,7 @@ import footerpage from '@/components/footerpage.vue'
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23901 10.3912C4.25342 6.15065 7.70278 2.72465 11.9434 2.73906C16.1839 2.75347 19.6099 6.20282 19.5955 10.4434V10.5304C19.5434 13.2869 18.0042 15.8347 16.1173 17.826C15.0381 18.9466 13.833 19.9387 12.526 20.7825C12.1765 21.0848 11.6581 21.0848 11.3086 20.7825C9.36008 19.5143 7.64995 17.9131 6.2564 16.0521C5.01436 14.4293 4.30918 12.4597 4.23901 10.4173L4.23901 10.3912Z" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="11.9172" cy="10.539" r="2.46087" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <p>Lagos,Nigeria</p>
+              <p>Lagos, Nigeria</p>
             </div>
           </div>
         </div>
@@ -270,7 +270,7 @@ import footerpage from '@/components/footerpage.vue'
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23901 10.3912C4.25342 6.15065 7.70278 2.72465 11.9434 2.73906C16.1839 2.75347 19.6099 6.20282 19.5955 10.4434V10.5304C19.5434 13.2869 18.0042 15.8347 16.1173 17.826C15.0381 18.9466 13.833 19.9387 12.526 20.7825C12.1765 21.0848 11.6581 21.0848 11.3086 20.7825C9.36008 19.5143 7.64995 17.9131 6.2564 16.0521C5.01436 14.4293 4.30918 12.4597 4.23901 10.4173L4.23901 10.3912Z" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="11.9172" cy="10.539" r="2.46087" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <p>Lagos,Nigeria</p>
+              <p>Lagos, Nigeria</p>
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ import footerpage from '@/components/footerpage.vue'
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23901 10.3912C4.25342 6.15065 7.70278 2.72465 11.9434 2.73906C16.1839 2.75347 19.6099 6.20282 19.5955 10.4434V10.5304C19.5434 13.2869 18.0042 15.8347 16.1173 17.826C15.0381 18.9466 13.833 19.9387 12.526 20.7825C12.1765 21.0848 11.6581 21.0848 11.3086 20.7825C9.36008 19.5143 7.64995 17.9131 6.2564 16.0521C5.01436 14.4293 4.30918 12.4597 4.23901 10.4173L4.23901 10.3912Z" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="11.9172" cy="10.539" r="2.46087" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <p>Lagos,Nigeria</p>
+              <p>Lagos, Nigeria</p>
             </div>
           </div>
         </div>
@@ -318,7 +318,7 @@ import footerpage from '@/components/footerpage.vue'
               <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23901 10.3912C4.25342 6.15065 7.70278 2.72465 11.9434 2.73906C16.1839 2.75347 19.6099 6.20282 19.5955 10.4434V10.5304C19.5434 13.2869 18.0042 15.8347 16.1173 17.826C15.0381 18.9466 13.833 19.9387 12.526 20.7825C12.1765 21.0848 11.6581 21.0848 11.3086 20.7825C9.36008 19.5143 7.64995 17.9131 6.2564 16.0521C5.01436 14.4293 4.30918 12.4597 4.23901 10.4173L4.23901 10.3912Z" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="11.9172" cy="10.539" r="2.46087" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <p>Lagos,Nigeria</p>
+              <p>Lagos, Nigeria</p>
             </div>
           </div>
         </div>
@@ -476,7 +476,7 @@ import footerpage from '@/components/footerpage.vue'
 .the-container{
   background-color: #532F82;
   width:100%;
-  padding-top:5%;
+  padding-top:10%;
   padding-bottom:7%;
   padding-left:3%;
   padding-right:3%;
@@ -494,12 +494,12 @@ import footerpage from '@/components/footerpage.vue'
 .search-bar{
   /* border:2px solid yellow; */
   background: #391766;
-  width:95%;
-  padding:8px;
+  width:89%;
+  padding:10px;
   border-radius:6px;
   margin-top: 9%;
   display:grid;
-  grid-template-columns:repeat(3, 1fr)
+  grid-template-columns:2fr 2fr 1fr;
 }
 .search-control{
   /* border:2px solid red; */
@@ -507,8 +507,21 @@ import footerpage from '@/components/footerpage.vue'
   justify-content:stretch;
   align-self: center;
   padding-left:10px;
-  gap:10px;
+  gap:15px;
   
+}
+.search-location{
+  border:2px solid white;
+  border-right:none;
+  border-top:none;
+  border-bottom:none;
+  text-align: center;
+  display:flex;
+  justify-content:left;
+  align-content:center;
+  gap:1.5rem;
+  padding:15px 0;
+  padding-left:20px;
 }
 .search-control p{
   font-family: 'Circular Std';
@@ -523,14 +536,16 @@ color: #7F6A9B;
 }
 .search-btn button{
   width:100%;
+  /* margin-left:10%; */
   font-family: 'Circular Std';
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 22px;
-  padding:10px 10px;
-  text-align: center;
+  padding:15px 10px;
+  text-align:center;
   color: #603F8B;
+
 }
 .the-search-info{
   /* border:2px solid yellow; */
@@ -540,21 +555,24 @@ color: #7F6A9B;
   font-family: 'Recoleta Alt';
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 56px;
   line-height: 49px;
+  width:93%;
   color: #FFFFFF;
   /* text-align:center; */
+  /* border:2px solid yellow; */
 }
 .the-search-info p{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 143.02%;
+  font-size: 24px;
+  line-height: 113.02%;
   color: #EDDFFF;
   /* border:2px solid red; */
-  width:95%;
-  margin:30px 0 ;
+  width:93%;
+  margin:10px 0 ;
+
   /* text-align: center; */
 }
 /* the right sidde */
@@ -624,12 +642,12 @@ color: #7F6A9B;
   font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 17px;
+font-size: 20px;
 line-height: 29px;
 text-align: center;
 color: #656565;
 /* border:2px solid red; */
-width:32%;
+width:35%;
 margin:auto;
 }
 .theangle{
@@ -744,7 +762,7 @@ font-size: 18px;
 line-height: 143.02%;
 margin:5% 0;
 /* identical to box height, or 26px */
-padding:10px 20px;
+padding:18px 40px;
 color: #FFFFFF;
 background: #603F8B;
 border-radius: 6px;
@@ -768,9 +786,10 @@ border:none;
   font-family: 'Recoleta Alt';
   font-style: normal;
   font-weight: 600;
-  font-size: 33px;
+  font-size: 36px;
   line-height: 49px;
   color: #1E1E4B;
+  /* padding-top:2%; */
   /* text-align:center; */
 }
 .section-three-bigpic svg{
@@ -796,7 +815,8 @@ border:none;
 .purple-smallsection{
   /* border:2px solid blue; */
   display:grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 10% 90%;
+  gap:2rem;
   width:80%;
   margin:0 5%;
 }
@@ -830,9 +850,9 @@ line-height: 139.02%;
 /* or 25px */
 color: #E6D3FF;
 margin-top:4%;
-width:83%;
+width:80%;
 /* border:2px solid yellow; */
-margin-left:5%;
+margin-left:6%;
 
 }
 
@@ -866,8 +886,9 @@ margin-left:5%;
   width:70%;
   margin:auto;
   text-align: center;
-
+  /* border:2px solid green; */
   color: #656565;
+  margin-bottom:5%;
 }
 .fourth-section-fours{
   /* border:2px solid red; */

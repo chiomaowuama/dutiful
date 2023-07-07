@@ -22,7 +22,7 @@ import whiteNav from '@/components/whiteNav.vue'
 
                 <p class="signup-message2">Enter OTP code that was sent to your email, segunsolaru@gmail.com. 
 .</p>
-                <button class="getstarted-btn">Next</button>
+                <button class="getstarted-btn"><RouterLink to="/resetpassword">Next</RouterLink></button>
             </form>
         </div>
    </div>
