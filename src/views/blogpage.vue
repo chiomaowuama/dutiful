@@ -1,7 +1,54 @@
 <script setup>
 import footerpage from '@/components/footerpage.vue'
 import whiteNav from '@/components/whiteNav.vue'
+import {onMounted,ref } from 'vue';
 
+let blogs = ref(null);
+let searchresponds = ref(null);
+
+async function blogdetails(){
+    let details = await fetch('https://api.dutiful.ng/v2/blog?per_page=50&page=1');
+    let blogresult = await details.json();
+    
+    blogs.value = blogresult.data.map(blog => {
+        return{
+            id: blog.id,
+            pictitle: blog.title,
+            picture: blog.image,
+            date: blog.created_at,
+        }
+
+    })
+
+    
+    
+    
+}
+async function searchall(){
+    const requestoption = {
+        method:"POST",
+        header:{
+            'Accept': 'application/json',
+            'content-Type': ' application/json',
+        },
+        body: JSON.stringify({ search: 'String'})
+    };
+    let result = await fetch(' https://api.dutiful.ng/v2/blog/search?per_page=50&page=1', requestoption);
+    let responds = await result.json();
+
+    searchresponds.value = responds.data.map(searchrespond => {
+        return{
+            title: searchrespond.title,
+        }
+    })
+   ;
+}
+onMounted(() => {
+    blogdetails();
+    searchall();
+ 
+    
+})
 </script>
 <template>
     <whiteNav/>
@@ -9,7 +56,7 @@ import whiteNav from '@/components/whiteNav.vue'
         <h3 class="blog-h3">Blog</h3>
         <div class="categories-and-filter">
             <div class="categories">
-                <p>Category</p>
+                <input type="text">
                 <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.24106 1.2459C1.53326 0.94784 1.99051 0.920743 2.31272 1.16461L2.40503 1.2459L9 7.97342L15.595 1.2459C15.8872 0.94784 16.3444 0.920743 16.6666 1.16461L16.7589 1.2459C17.0511 1.54396 17.0777 2.01037 16.8386 2.33904L16.7589 2.43321L9.58198 9.7541C9.28978 10.0522 8.83254 10.0793 8.51033 9.83539L8.41802 9.7541L1.24106 2.43321C0.919645 2.10534 0.919645 1.57376 1.24106 1.2459Z" fill="#603F8B" stroke="#603F8B"/>
                     </svg>
@@ -22,16 +69,17 @@ import whiteNav from '@/components/whiteNav.vue'
 
             </div>
         </div>
-        <div class="blogs-menu">
-            <div class="each-menu">
+        <div class="blogs-menu" >
+            <div class="each-menu" v-for="(blog, id) in blogs" :key="id">
                 <div class="each-menu-top">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    </svg> -->
+                    <img :src="blog.picture" alt="" class="svg" >
                 </div>
                 <div class="the-menu-bottom">
-                    <p class="the-menu-bottom-p">How to connect with customers online as a food vendor</p>
+                    <p class="the-menu-bottom-p">{{ blog.pictitle }}</p>
                     <div class="bottom-blog">
                         <div class="bottom-blog1">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,259 +102,80 @@ import whiteNav from '@/components/whiteNav.vue'
                     </div>
                 </div>
             </div>
-            <div class="each-menu">
-                <div class="each-menu-top">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom">
-                    <p class="the-menu-bottom-p">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog">
-                        <div class="bottom-blog1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog2"> 
-                            <p>2 mins read</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="each-menu">
-                <div class="each-menu-top">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom">
-                    <p class="the-menu-bottom-p">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog">
-                        <div class="bottom-blog1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog2"> 
-                            <p>2 mins read</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="each-menu">
-                <div class="each-menu-top">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom">
-                    <p class="the-menu-bottom-p">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog">
-                        <div class="bottom-blog1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog2"> 
-                            <p>2 mins read</p>
-                        </div>
-                    </div>
-                </div>
-            </div>      
-            <div class="each-menu">
-                <div class="each-menu-top">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom">
-                    <p class="the-menu-bottom-p">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog">
-                        <div class="bottom-blog1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog2"> 
-                            <p>2 mins read</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="each-menu">
-                <div class="each-menu-top">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom">
-                    <p class="the-menu-bottom-p">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog">
-                        <div class="bottom-blog1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog2"> 
-                            <p>2 mins read</p>
-                        </div>
-                    </div>
-                </div>
-            </div>      
+           
         </div>
         <div class="the-lowerbatch">
             <h3>Trending articles</h3>
-            <div class="blogs-menu1" >
-                <div class="each-menu1">
-                <div class="each-menu-top1">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom1">
-                    <p class="the-menu-bottom-p1">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog5">
-                        <div class="bottom-blog3">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog4"> 
-                            <p>2 mins read</p>
+            <div class="logos">
+                <div class="blogs-menu1 logos-slide" >
+                    <div class="each-menu1" v-for="(blog, id) in blogs" :key="id">
+                    <div class="each-menu-top1">
+                        <!-- <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> -->
+                        <img :src="blog.picture" alt="" class="svg2" >
+                    </div>
+                    <div class="the-menu-bottom1">
+                        <p class="the-menu-bottom-p1">{{ blog.pictitle }}</p>
+                        <div class="bottom-blog5">
+                            <div class="bottom-blog3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>24,Aug, 2021</p>
+                            </div>
+                            <div class="bottom-blog4"> 
+                                <p>2 mins read</p>
+                            </div>
                         </div>
                     </div>
+                    </div>
+                          
                 </div>
-                </div>
-                <div class="each-menu1">
-                <div class="each-menu-top1">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom1">
-                    <p class="the-menu-bottom-p1">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog5">
-                        <div class="bottom-blog3">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog4"> 
-                            <p>2 mins read</p>
+                <div class="blogs-menu1 logos-slide" >
+                    <div class="each-menu1" v-for="(blog, id) in blogs" :key="id">
+                    <div class="each-menu-top1" >
+                        
+                        <img :src="blog.picture" alt="" class="svg2" >
+                    </div>
+                    <div class="the-menu-bottom1">
+                        <p class="the-menu-bottom-p1">{{ blog.pictitle }}</p>
+                        <div class="bottom-blog5">
+                            <div class="bottom-blog3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>24,Aug, 2021</p>
+                            </div>
+                            <div class="bottom-blog4"> 
+                                <p>2 mins read</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                </div> 
-                <div class="each-menu1">
-                <div class="each-menu-top1">
-                    <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="the-menu-bottom1">
-                    <p class="the-menu-bottom-p1">How to connect with customers online as a food vendor</p>
-                    <div class="bottom-blog5">
-                        <div class="bottom-blog3">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p>24,Aug, 2021</p>
-                        </div>
-                        <div class="bottom-blog4"> 
-                            <p>2 mins read</p>
-                        </div>
                     </div>
+                           
                 </div>
-                </div>        
             </div>
+            
         </div>
    </div>
     <footerpage/>
@@ -380,7 +249,7 @@ color: #603F8B;
     /* border:2px solid yellow; */
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:7rem;
+    gap:3rem;
     row-gap:5rem;
     margin-top:5%;
 
@@ -400,14 +269,24 @@ box-sizing: border-box;
 .each-menu-top{
     /* border:2px solid green; */
     background: #B7B7D6;
+   
 border-radius: 6px;
 display:flex;
-justify-content: center;
+justify-content:center;
 align-content: center;
-padding:10% 0;
+padding:0% 0;
+height:250px;
+width:90%;
+margin:auto;
+
 }
-.each-menu-top svg{
-    width:30%;
+.each-menu-top .svg{
+    width:100%;
+  
+    
+    
+  
+
     /* border:2px solid blue; */
 }
 .bottom-blog{
@@ -471,18 +350,23 @@ padding:10% 0;
     /* border:2px solid yellow; */
     margin:5% 0;
     padding:0 5%;
-    }
+}
+
+
+
 /* the down menu */
 .blogs-menu1{
     /* border:2px solid yellow; */
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    width:100%;
+    grid-template-columns:  repeat(8, 1fr);
+    gap: 1.6rem;
     row-gap:2rem;
 }
-/* .the-menu-bottom1{
-    border:2px solid blue;
-} */
+.the-menu-bottom1{
+    /* border:2px solid blue; */
+    width:205px;
+}
 .each-menu1{
     box-sizing: border-box;
     background: #FFFFFF;
@@ -499,15 +383,17 @@ box-sizing: border-box;
 .each-menu-top1{
     /* border:2px solid green; */
     background: #B7B7D6;
-    height:150px;
+    height:160px;
+  
 border-radius: 6px;
 display:flex;
 justify-content: center;
 align-content: center;
 padding:0% 0;
+width:170px;
 }
-.each-menu-top1 svg{
-    width:25%;
+.each-menu-top1 .svg2{
+    width:100%;
     /* border:2px solid blue; */
 }
 .bottom-blog5{
@@ -541,6 +427,7 @@ padding:0% 0;
     font-weight: 450;
     font-size: 16px;
     line-height: 30px;
+   
     /* identical to box height, or 188% */
     color: #A6A6D2;
 }
@@ -566,14 +453,19 @@ padding:0% 0;
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 450;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 30px;
     /* or 150% */
     color: #1E1E4B;
     /* border:2px solid yellow; */
-    padding:0 2%;
+    height:110px;
+    width:90%;
+    margin-left:5%;
+    white-space: wrap;
+    padding:0 3%;
     margin:5% 0;
-    }
+}
+/* the lower batch side  */
 .the-lowerbatch{
     /* border:2px solid green; */
     margin:3% 0;
@@ -589,6 +481,33 @@ line-height: 40px;
 color: #1E1E4B;
 margin:5% 0;
 }
+.logos{
+    /* border:2px solid green; */
+    display:flex;
+    gap:1rem;
+    /* box-sizing: border-box; */
+    overflow:hidden;
+    white-space: nowrap;
+    padding:10px 0; 
+}
+.logos:hover .logos-slide{
+    animation-play-state:paused;
+}
+.logos-slide{
+    animation:5s slide infinite linear;
+    /* border:2px solid yellow; */
+}
+@keyframes slide{
+    from{
+        transform:translateX(0)
+
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
+
 @media screen and (max-width: 900px){
     .blogs-menu{
     /* border:2px solid yellow; */
@@ -876,5 +795,161 @@ line-height: 40px;
 color: #1E1E4B;
 margin:5% 0;
 }
+
+
+/* slide */
+.blogs-menu1{
+    /* border:2px solid yellow; */
+    display:grid;
+    width:100%;
+    grid-template-columns:  repeat(8, 1fr);
+    gap: 1.6rem;
+    row-gap:2rem;
+}
+.the-menu-bottom1{
+    /* border:2px solid blue; */
+    width:205px;
+}
+.each-menu1{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #EEEEFF;
+    border-radius: 12px;
+/* border: 1px solid #EEEEFF; */
+/* border:2px solid yellow; */
+display:grid;
+grid-template-columns: 1fr 1fr;
+border-radius: 12px;
+box-sizing: border-box;
+/* width:22%; */
+}
+.each-menu-top1{
+    /* border:2px solid green; */
+    background: #B7B7D6;
+    height:160px;
+  
+border-radius: 6px;
+display:flex;
+justify-content: center;
+align-content: center;
+padding:0% 0;
+width:170px;
+}
+.each-menu-top1 .svg2{
+    width:100%;
+    /* border:2px solid blue; */
+}
+.bottom-blog5{
+    /* border:2px solid red; */
+    margin-top:0%;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    /* justify-content:flex-start; */
+    /* align-content: center; */
+
+}
+.bottom-blog3{
+    /* border:2px solid yellow; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0rem;
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 10px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    color: #A6A6D2;
+
+}
+
+.bottom-blog-p1{
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 30px;
+   
+    /* identical to box height, or 188% */
+    color: #A6A6D2;
+}
+.bottom-blog4 p{
+    /* border:2px solid yellow; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:5px;
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 10px;
+    line-height: 30px;
+    
+    /* identical to box height, or 188% */
+    text-align: right;
+    color: #1E1E4B;
+
+}
+.the-menu-bottom-p1{
+    
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 8px;
+    line-height: 30px;
+    /* or 150% */
+    color: #1E1E4B;
+    /* border:2px solid yellow; */
+    height:110px;
+    width:90%;
+    margin-left:5%;
+    white-space: wrap;
+    padding:0 3%;
+    margin:5% 0;
+}
+/* the lower batch side  */
+.the-lowerbatch{
+    /* border:2px solid green; */
+    margin:3% 0;
+}
+.the-lowerbatch h3{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 40px;
+
+color: #1E1E4B;
+margin:5% 0;
+}
+.logos{
+    /* border:2px solid green; */
+    display:flex;
+    gap:1rem;
+    /* box-sizing: border-box; */
+    overflow:hidden;
+    white-space: nowrap;
+    padding:10px 0; 
+}
+.logos:hover .logos-slide{
+    animation-play-state:paused;
+}
+.logos-slide{
+    animation:5s slide infinite linear;
+    /* border:2px solid yellow; */
+}
+@keyframes slide{
+    from{
+        transform:translateX(0)
+
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
+
 }
 </style>

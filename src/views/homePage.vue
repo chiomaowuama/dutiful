@@ -39,7 +39,7 @@ import footerpage from '@/components/footerpage.vue'
         </div>
       </div>
       <div class="the-rightside">
-        <p class="the-watch">whatch The Video</p>
+        <p class="the-watch">watch The Video</p>
         <img src="@/assets/firstpic.png" alt="" class="the-image">
         <svg class="youtube" width="124" height="88" viewBox="0 0 124 88" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_204_1508)">
@@ -1107,39 +1107,41 @@ color: #6C6C6C;
 } */
 .underline{
   /* border:2px solid red; */
-  margin-left:65%;
-  width:130px;
+  margin-left:45%;
+  width:110px;
   }
 .search-bar{
   /* border:2px solid yellow; */
   background: #391766;
   width:95%;
-  padding:8px;
+  margin:auto;
+  padding:5px;
   border-radius:6px;
-  margin-top: 9%;
+  margin-top: 15%;
   display:grid;
   grid-template-columns:repeat(3, 1fr)
   }
 .search-control{
   /* border:2px solid red; */
-  display:flex;
-  justify-content:stretch;
-  align-self: center;
+ display:flex;
+ justify-content:center;
+ align-items:center;
   padding-left:10px;
-  gap:10px;
+  gap:4px;
   
   }
 .search-control p{
   font-family: 'Circular Std';
 font-style: normal;
 font-weight: 450;
-font-size: 20px;
+font-size: 15px;
 line-height: 25px;
 display: flex;
-align-items: center;
-
+align-items:right;
+/* border:2px solid green; */
 color: #7F6A9B;
   }
+
 .search-btn button{
   width:100%;
   font-family: 'Circular Std';
@@ -1147,7 +1149,7 @@ color: #7F6A9B;
   font-weight: 500;
   font-size: 17px;
   line-height: 22px;
-  padding:10px 10px;
+  padding:10px 15px;
   text-align: center;
   color: #603F8B;
   }
@@ -1191,6 +1193,7 @@ color: #7F6A9B;
   position:absolute;
   z-index:2;
   top:-10px;
+  /* border:2px solid yellow; */
   }
 .youtube{
   /* border:2px solid green; */
@@ -1216,9 +1219,9 @@ color: #7F6A9B;
   left:220px;
 }
 .the-image{
-  width: 348px;
+  width: 328px;
   height: 255px;
-  margin-left:2.5%;
+  margin-left:2.3%;
   position:absolute;
   z-index:1;
   

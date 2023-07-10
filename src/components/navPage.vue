@@ -154,6 +154,7 @@ a:hover{
     label.logo{
         font-size:30px;
         padding-left:50px;
+        /* border:2px solid green; */
 
     }
     .nav ul li a{
@@ -177,15 +178,15 @@ a:hover{
 
 }  
     .nav ul{
-    border:2px solid green;
+    /* border:2px solid green; */
 
         position: fixed ;
         width:100%;
         height:auto;
         min-height: 100vh;
-        background-color:#271044;
+        background-color:#532F82;
         overflow:auto;
-        top:80px;
+        top:60px;
         left:-100%;
         z-index: 3;
         text-align:center;

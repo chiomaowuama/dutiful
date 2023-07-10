@@ -24,7 +24,7 @@ onMounted(() => {
     <div class="lead-container">
         <div class="lead-firstsection">
             <p class="lead-firstsection-p">Leads generation</p>
-            <h3 class="lead-firstsection-h3">{{ alldetails.title }}</h3>
+            <h3 class="lead-firstsection-h3">{{ alldetails?.title }}</h3>
             <div class="lead-svg-first">
                 <div class="calenda-lead">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,10 +71,10 @@ onMounted(() => {
 <path d="M136.655 142.31C126.015 161.484 106.175 163.147 92.4321 145.968L89.9937 142.864C75.6962 124.909 55.5246 127.126 45.2171 147.63L26.1537 185.868C12.8537 212.468 32.2496 243.833 61.9529 243.833H203.376C232.082 243.833 251.478 214.463 240.173 187.973L205.482 106.954C193.734 79.4676 172.121 78.3592 157.602 104.516" stroke="white" stroke-width="16.625" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M110.508 55.4167C110.508 73.815 95.6561 88.6667 77.2578 88.6667C58.8595 88.6667 44.0078 73.815 44.0078 55.4167C44.0078 37.0183 58.8595 22.1667 77.2578 22.1667C81.2478 22.1667 85.0161 22.8317 88.452 24.1617" stroke="white" stroke-width="16.625" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg> -->
-                <img :src="alldetails.image" alt="catImage" class="svg">
+                <img :src="alldetails?.image" alt="catImage" class="svg">
             </div>
             <div class="lead-secondsection-third">
-                <p v-html="alldetails.body"></p>
+                <p v-html="alldetails?.body"></p>
             </div>
             <div class="lead-secondsection-fourth">
                 <h3>Comments</h3>

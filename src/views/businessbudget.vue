@@ -688,9 +688,6 @@ color: #FFFFFF;
     opacity: 0.5;
     transition: all 0.3s ease;
 }
-.bigmarkdiv{
-    /* border:2px solid yellow; */
-}
 .each-markand-text1{
     /* border:2px solid green; */
     margin:10% 0;
@@ -896,9 +893,6 @@ color: #FFFFFF;
     height:45px;
     opacity: 0.5;
     transition: all 0.3s ease;
-}
-.bigmarkdiv{
-    /* border:2px solid yellow; */
 }
 .each-markand-text1{
     /* border:2px solid green; */
