@@ -4,7 +4,11 @@ import whiteNav from '@/components/whiteNav.vue'
 import {onMounted,ref } from 'vue';
 
 let blogs = ref(null);
-let searchresponds = ref(null);
+// let searchresponds = ref(null);
+let search = ref(null);
+let searchresponds = ref([]);
+let rest = ref(null);
+const searchTerm = ref(search.value);
 
 async function blogdetails(){
     let details = await fetch('https://api.dutiful.ng/v2/blog?per_page=50&page=1');
@@ -18,36 +22,51 @@ async function blogdetails(){
             date: blog.created_at,
         }
 
-    })
-
-    
-    
-    
+    })   
+  
 }
-async function searchall(){
-    const requestoption = {
-        method:"POST",
-        header:{
-            'Accept': 'application/json',
-            'content-Type': ' application/json',
-        },
-        body: JSON.stringify({ search: 'String'})
-    };
-    let result = await fetch(' https://api.dutiful.ng/v2/blog/search?per_page=50&page=1', requestoption);
-    let responds = await result.json();
+async function searchAll() {
+  const searchTerm = search.value;
+  console.log(searchTerm);
+  
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ search: searchTerm })
+  };
 
-    searchresponds.value = responds.data.map(searchrespond => {
-        return{
-            title: searchrespond.title,
-        }
-    })
-   ;
+  try {
+    const response = await fetch('https://api.dutiful.ng/v2/blog/search?per_page=50&page=1', requestOptions);
+    const data = await response.json();
+    rest.value = data
+    
+  
+    const filteredResults = data.data.filter(searchResponse => {
+     
+       return searchResponse.title.toLowerCase().includes(searchTerm.toLowerCase());
+   
+    });
+
+  
+    const searchResults = filteredResults.map(searchResponse => {
+      return {
+        title: searchResponse.title,
+        picture: searchResponse.image,
+      };
+    });
+
+    searchresponds.value = searchResults;
+   
+  } catch (error) {
+    console.error(error);
+  }
 }
+console.log(rest.value);
 onMounted(() => {
     blogdetails();
-    searchall();
- 
-    
 })
 </script>
 <template>
@@ -56,7 +75,8 @@ onMounted(() => {
         <h3 class="blog-h3">Blog</h3>
         <div class="categories-and-filter">
             <div class="categories">
-                <input type="text">
+                <input type="text" v-model="search">
+                <button @click="searchAll()">click me </button>
                 <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.24106 1.2459C1.53326 0.94784 1.99051 0.920743 2.31272 1.16461L2.40503 1.2459L9 7.97342L15.595 1.2459C15.8872 0.94784 16.3444 0.920743 16.6666 1.16461L16.7589 1.2459C17.0511 1.54396 17.0777 2.01037 16.8386 2.33904L16.7589 2.43321L9.58198 9.7541C9.28978 10.0522 8.83254 10.0793 8.51033 9.83539L8.41802 9.7541L1.24106 2.43321C0.919645 2.10534 0.919645 1.57376 1.24106 1.2459Z" fill="#603F8B" stroke="#603F8B"/>
                     </svg>
@@ -69,13 +89,12 @@ onMounted(() => {
 
             </div>
         </div>
-        <div class="blogs-menu" >
-            <div class="each-menu" v-for="(blog, id) in blogs" :key="id">
+        <!-- v-if="search != null" -->
+        {{ searchTerm }}
+        <div class="blogs-menu"  v-if="searchTerm == null" >
+            <div class="each-menu" v-for="(blog, id) in blogs" :key="id" >
                 <div class="each-menu-top">
-                    <!-- <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M53.429 55.64C49.269 63.1367 41.5124 63.7867 36.139 57.07L35.1857 55.8567C29.5957 48.8367 21.709 49.7033 17.679 57.72L10.2257 72.67C5.02571 83.07 12.609 95.3333 24.2224 95.3333H79.5157C90.739 95.3333 98.3224 83.85 93.9024 73.4933L80.339 41.8167C75.7457 31.07 67.2957 30.6367 61.619 40.8633" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M43.207 21.6667C43.207 28.86 37.4004 34.6667 30.207 34.6667C23.0137 34.6667 17.207 28.86 17.207 21.6667C17.207 14.4733 23.0137 8.66667 30.207 8.66667C31.767 8.66667 33.2404 8.92667 34.5837 9.44667" stroke="white" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> -->
+                    
                     <img :src="blog.picture" alt="" class="svg" >
                 </div>
                 <div class="the-menu-bottom">
@@ -101,8 +120,39 @@ onMounted(() => {
                         </div>
                     </div>
                 </div>
+            </div>    
+        </div>
+     
+        <div class="blogs-menu" v-else >
+            <div class="each-menu" v-for="(searchrespond, index) in searchresponds" :key="index">
+                <div class="each-menu-top">
+                    
+                    <img :src="searchrespond.picture" alt="" class="svg" >
+                </div>
+                <div class="the-menu-bottom">
+                    <p class="the-menu-bottom-p">{{ searchrespond.title }}</p>
+                    <div class="bottom-blog">
+                        <div class="bottom-blog1">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 2V5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3.5 9.09H20.5" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#A6A6D2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15.6937 13.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15.6937 16.7H15.7027" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.9945 13.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.9945 16.7H12.0035" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p>24,Aug, 2021</p>
+                        </div>
+                        <div class="bottom-blog2"> 
+                            <p>2 mins read</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-           
         </div>
         <div class="the-lowerbatch">
             <h3>Trending articles</h3>
