@@ -495,10 +495,16 @@ onMounted(() => {
 </template>
 <style>
 .beneatall-business{
-    /* border:2px solid yellow; */
+    /* border:10px solid yellow; */
     display:grid;
     grid-template-columns: 1fr 2fr;
+ 
     
+    
+}
+.getting-in-touch{
+    /* border:2px solid green; */
+    padding-top:7%;
 }
 .beneat-ul p{
     /* border:2px solid green; */
@@ -544,8 +550,9 @@ color: #656565;
     background-image: url("@/assets/backgroungontouch.png");
     background-size:contain;
     height:250px;
-    padding-top:2%;
+    padding-top:20%;
     background-repeat: repeat;
+    
 
 }
 .getting-in-touch-first h3{

@@ -98,6 +98,8 @@ import whiteNav from '@/components/whiteNav.vue'
 .dutiful-first{
     background-color:#532F82;
     padding:3%;
+    /* border:2px solid yellow; */
+    padding-top:9%;
 }
 .dutiful-head h3{
     font-family: 'Recoleta Alt';

@@ -52,13 +52,13 @@ Lagos, Nigeria</p>
         </div>
         <div class="getstarted-div-form moving-low">
             <form action="" class="getstarted-form">
-                <label for="">FULL name</label>
+                <label for="">Full name</label>
                 <input type="text">
                 <label for="">Email</label>
                 <input type="email">
                 <label for="">Business type (Optional)</label>
                 <input type="text">
-                <label for="" >Password</label>
+                <label for="" >subject</label>
                 <div class="passwordpart">
                     <input type="text" >
                     <svg class="eyes" width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@ color: #FFFFFF;
 .the-customers-support{
     /* border:2px solid yellow; */
     margin-top:-5%;
-    margin-bottom:-5%;
+    margin-bottom:-3%;
     display:flex;
     justify-content: space-around;
     align-content: center;
@@ -176,6 +176,7 @@ color: #656565;
 /* form part */
 /* .getstarted-div-form{
     border:2px solid yellow;
+  
 } */
 .getstarted-form{
     /* border:2px solid yellow; */
@@ -208,7 +209,7 @@ color: #656565;
 
 .textarea-one{
     border:2px solid green; box-sizing: border-box;
-    width: 486px;
+    width: 456px;
     height: 120px;
     outline: none;
     font-size:20px;
@@ -226,22 +227,23 @@ color: #656565;
 box-shadow: 2px 8px 8px rgba(86, 86, 86, 0.25);
 border-radius: 6px;
 font-family: 'Circular Std';
+cursor: pointer;
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 143.02%;
 /* identical to box height, or 26px */
 border:none;
-margin-top:5%;
+margin-top:3%;
 color: #FFFFFF;
+width:91%;
 height: 58px;
 margin-bottom: 15%;
+/* border:2px solid green; */
 /* left: 477px; */
 /* top: 1065px; */
 }
-.moving-low{
-    margin-top:10%;
-}
+
 @media screen and (max-width: 900px){
     .getting-in-touch-first{
     /* border:2px solid yellow; */
@@ -249,7 +251,7 @@ margin-bottom: 15%;
     background-image: url("@/assets/backgroungontouch.png");
     background-size:contain;
     height:250px;
-    padding-top:2%;
+    padding-top:15%;
     background-repeat: repeat;
 
 }
@@ -378,7 +380,7 @@ color: #656565;
 
 .textarea-one{
     border:2px solid green; box-sizing: border-box;
-    width: 286px;
+    width: 266px;
     height: 120px;
     outline: none;
     font-size:20px;
@@ -406,6 +408,8 @@ margin-top:5%;
 color: #FFFFFF;
 height: 58px;
 margin-bottom: 15%;
+width:100%;
+/* border:2px solid yellow; */
 /* left: 477px; */
 /* top: 1065px; */
 }

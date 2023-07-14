@@ -184,16 +184,23 @@ import whiteNav from '@/components/whiteNav.vue'
 </template>
 
 <style>
+.about{
+  /* border:2px solid yellow; */
+  padding-top:3%;
+}
 .the-container1{
   background-color:white;
   width:100%;
-  padding-top:5%;
+  padding-top:10%;
   padding-bottom:7%;
   padding-left:3%;
   padding-right:3%;
   display:grid;
+  /* border:2px solid yellow; */
   grid-template-columns: 50% 50%;
+   
 }
+
 /* .the-leftside1{
   border:2px solid yellow;
 } */
@@ -261,6 +268,7 @@ color: #7F6A9B;
   margin:30px 0 ;
   /* text-align: center; */
 }
+
 /* the right sidde */
 .the-rightside2{
   /* border:2px solid green; */

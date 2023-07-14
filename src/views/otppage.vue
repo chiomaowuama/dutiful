@@ -29,14 +29,23 @@ import whiteNav from '@/components/whiteNav.vue'
 .getstated-container{
     /* border:2px solid green; */
     padding:5% 0;
+  
 
+}
+.getstarted-div-form{
+    /* border:2px solid red; */
+    margin-top:5%;
+    
 }
 .the-images-icon{
     /* border:2px solid green; */
     width:20%;
     background-color: #F8F3FF;
     border-radius: 70px;
-    margin:auto;
+    margin-left:35%;
+    align-self: center;
+    /* margin:auto; */
+
 }
 .emailimage{
     margin:auto;
@@ -44,7 +53,7 @@ import whiteNav from '@/components/whiteNav.vue'
     margin-left:10%;
 }
 .signup-message2{
-    /* border:2px solid yellow; */
+    border:2px solid yellow;
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 450;
@@ -52,7 +61,7 @@ import whiteNav from '@/components/whiteNav.vue'
     line-height: 20px;
    width:90%;
    text-align: center;
-   margin:auto;
+   /* margin:auto; */
      margin-bottom: 3%;
     color: #686868;
 }
@@ -118,7 +127,7 @@ import whiteNav from '@/components/whiteNav.vue'
     border:2px solid yellow;
 } */
 .getstarted-form{
-    /* border:2px solid yel/low; */
+    /* border:2px solid yellow; */
     display:grid;
     gap:1rem;
     width:40%;
@@ -216,10 +225,11 @@ color: #A3B1BF;
     .getstated-container{
     /* border:2px solid green; */
     padding:5% 0;
+   
 
 }
 .the-images-icon{
-    /* border:2px solid green; */
+    border:2px solid green;
     width:40%;
     background-color: #F8F3FF;
     border-radius: 70px;

@@ -18,15 +18,8 @@
             </svg>
         </label>
         <ul>
-            <li><a href="#" class="search">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="19.6108" cy="19.611" r="14.9809" stroke="#603F8B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M30.0303 30.8086L35.9037 36.6667" stroke="#603F8B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                </a>
-            </li>
-            <li><RouterLink to="/">BUSINESS DIRECTORY</RouterLink></li>
+            
+            <li><RouterLink to="/">Business Directory</RouterLink></li>
             <li><RouterLink to="/AboutView">Features</RouterLink></li>
                 <li><RouterLink to="/businessbudget">Pricing</RouterLink></li>
                 <li><RouterLink to="/blogpage">Blog</RouterLink></li>
@@ -54,7 +47,10 @@ width:100%
 width:100%;
 background: white;
 /* border:2px solid red; */
+z-index:2;
+position: fixed;
 height:80px;
+
 
 }
 label.logo{
@@ -68,12 +64,15 @@ font-weight:bold;
 float:right;
 margin-right:20px;
 
+/* border:2px solid yellow; */
+
 
 }
 .navone ul li{
 display:inline-block;
 line-height: 80px;
-margin:0 5px;
+margin:0 10px;
+padding:0 10px;
 /* border:2px solid yellow; */
 
 }
@@ -82,10 +81,14 @@ color:#686868;
 font-size:17px;
 padding:7px 13px;
 border-radius:3px;
-text-transform:uppercase;
+/* text-transform:uppercase; */
 }
 .navone ul li a:hover{
-    color:white;
+    border:2px solid #1E1E4B;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    
 }
 .navone a.active{
     /* border:2px solid blue; */
@@ -152,15 +155,17 @@ label.logo{
 @media  screen and (max-width:858px){
 .checkbtn{
     display:block;
+    font-size:15px;
+    /* background-color: red;; */
  
 }
 .navone ul{
     position: fixed ;
     width:100%;
-    height:auto;
-    background-color:rgba(241, 229, 229, 0.132);
+    height:100vh;
+    background-color:#fffdfd;;
     overflow:auto;
-    top:80px;
+    top:75px;
     left:-100%;
     text-align:center;
     transition:all .5s;

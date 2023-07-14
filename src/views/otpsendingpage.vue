@@ -36,15 +36,15 @@ import whiteNav from '@/components/whiteNav.vue'
 }
 .the-images-icon{
     /* border:2px solid green; */
-    width:20%;
+    width:90%;
     background-color: #F8F3FF;
-    border-radius: 70px;
-    margin:auto;
+    /* border-radius: 70px; */
+    /* margin:auto; */
 }
 .emailimage{
     margin:auto;
     width:80%;
-    margin-left:10%;
+    /* margin-left:10%; */
 }
 .signup-message2{
     /* border:2px solid yellow; */
@@ -55,7 +55,7 @@ import whiteNav from '@/components/whiteNav.vue'
     line-height: 20px;
    width:90%;
    text-align: center;
-   margin:auto;
+   /* margin:auto; */
      margin-bottom: 3%;
     color: #686868;
 }

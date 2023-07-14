@@ -73,7 +73,7 @@ import whiteNav from '@/components/whiteNav.vue'
                     <p>I agree to Dutiful's <span class="colored-span">terms and conditions</span></p>
                     </div>
                 </div>
-                <button class="getstarted-btn">Sign up</button>
+                <button class="getstarted-btn"><RouterLink to="/otppage">Sign up</RouterLink></button>
                 <p class="signing-in">Already have an account? <RouterLink to="/loginpage">Login</RouterLink></p>
 
             </form>
@@ -109,7 +109,7 @@ import whiteNav from '@/components/whiteNav.vue'
     /* text-align: center; */
     width:40%;
     margin:1% auto;
-    /* border:2px solid yellow; */
+    /* border:2px solid red;; */
 }
 /* .buttonsection{
     border:2px solid yellow;
@@ -119,7 +119,8 @@ import whiteNav from '@/components/whiteNav.vue'
     width:40%;
     margin:auto;
     display:flex;
-    gap:2.5rem
+    gap:2.5rem;
+    margin-bottom:-2%;
     /* justify-content: center; */
     /* align-content: center; */
 }
@@ -176,7 +177,7 @@ import whiteNav from '@/components/whiteNav.vue'
     border:2px solid yellow;
 } */
 .getstarted-form{
-    /* border:2px solid yel/low; */
+    /* border:2px solid yellow; */
     display:grid;
     gap:1rem;
     width:40%;
@@ -186,7 +187,7 @@ import whiteNav from '@/components/whiteNav.vue'
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 23px;
     /* identical to box height */
     letter-spacing: -0.005em;
@@ -195,13 +196,14 @@ import whiteNav from '@/components/whiteNav.vue'
 }
 .getstarted-form input{
     box-sizing: border-box;
-    width: 486px;
-    height: 50px;
+    width: 456px;
+    height: 40px;
     outline: none;
     font-size:20px;
     background: #F8FAFD;
     border: 2px solid #E7EAF1;
     border-radius: 6px;
+    /* border:2px solid green; */
 }
 .getstarted-check{
     /* border:2px solid red; */
@@ -238,9 +240,11 @@ font-size: 18px;
 line-height: 143.02%;
 /* identical to box height, or 26px */
 border:none;
-margin-top:5%;
+margin-top:0%;
 color: #FFFFFF;
 height: 58px;
+width:91%;
+/* border:2px solid green; */
 /* left: 477px; */
 /* top: 1065px; */
 }
@@ -268,12 +272,13 @@ color: #A3B1BF;
     position: absolute;
     width:50px;
     top:18px;
-    left:85%;
+    left:80%;
 }
 @media screen and (max-width: 900px){
     .getstated-container{
     /* border:2px solid green; */
     padding:5% 0;
+    padding-top:20%;
 
 }
 .signup-message{
@@ -415,6 +420,7 @@ border:none;
 margin-top:5%;
 color: #FFFFFF;
 height: 58px;
+/* border:2px solid green */
 /* left: 477px; */
 /* top: 1065px; */
 }
@@ -441,8 +447,18 @@ color: #A3B1BF;
     /* border:2px solid yellow; */
     position: absolute;
     width:50px;
-    top:18px;
-    left:85%;
+    top:20px;
+    left:75%;
 }
+}
+@media screen  and (max-width: 1180px) and (min-width: 950px){
+
+
+
+
+
+
+
+
 }
 </style>

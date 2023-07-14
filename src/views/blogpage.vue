@@ -8,7 +8,7 @@ let blogs = ref(null);
 let search = ref(null);
 let searchresponds = ref([]);
 let rest = ref(null);
-const searchTerm = ref(search.value);
+// const searchTerm = ref(search.value);
 
 async function blogdetails(){
     let details = await fetch('https://api.dutiful.ng/v2/blog?per_page=50&page=1');
@@ -26,8 +26,8 @@ async function blogdetails(){
   
 }
 async function searchAll() {
-  const searchTerm = search.value;
-  console.log(searchTerm);
+//   const searchTerm = search.value;
+//   console.log(searchTerm);
   
   const requestOptions = {
     method: "POST",
@@ -35,7 +35,7 @@ async function searchAll() {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ search: searchTerm })
+    body: JSON.stringify({ search: search.value })
   };
 
   try {
@@ -44,14 +44,14 @@ async function searchAll() {
     rest.value = data
     
   
-    const filteredResults = data.data.filter(searchResponse => {
+    // const filteredResults = data.data.filter(searchResponse => {
      
-       return searchResponse.title.toLowerCase().includes(searchTerm.toLowerCase());
+    //    return searchResponse.title.toLowerCase().includes(search.toLowerCase());
    
-    });
+    // });
 
   
-    const searchResults = filteredResults.map(searchResponse => {
+    const searchResults = data.data.map(searchResponse => {
       return {
         title: searchResponse.title,
         picture: searchResponse.image,
@@ -75,11 +75,9 @@ onMounted(() => {
         <h3 class="blog-h3">Blog</h3>
         <div class="categories-and-filter">
             <div class="categories">
-                <input type="text" v-model="search">
-                <button @click="searchAll()">click me </button>
-                <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.24106 1.2459C1.53326 0.94784 1.99051 0.920743 2.31272 1.16461L2.40503 1.2459L9 7.97342L15.595 1.2459C15.8872 0.94784 16.3444 0.920743 16.6666 1.16461L16.7589 1.2459C17.0511 1.54396 17.0777 2.01037 16.8386 2.33904L16.7589 2.43321L9.58198 9.7541C9.28978 10.0522 8.83254 10.0793 8.51033 9.83539L8.41802 9.7541L1.24106 2.43321C0.919645 2.10534 0.919645 1.57376 1.24106 1.2459Z" fill="#603F8B" stroke="#603F8B"/>
-                    </svg>
+                <input type="text" v-model="search" @keydown="searchAll()" placeholder="search Blog" >
+                <!-- <button>click me </button> -->
+              
             </div>
             <div class="filter">
                 <p>filter</p>
@@ -90,8 +88,8 @@ onMounted(() => {
             </div>
         </div>
         <!-- v-if="search != null" -->
-        {{ searchTerm }}
-        <div class="blogs-menu"  v-if="searchTerm == null" >
+       
+        <div class="blogs-menu"  v-if="search == null" >
             <div class="each-menu" v-for="(blog, id) in blogs" :key="id" >
                 <div class="each-menu-top">
                     
@@ -234,6 +232,7 @@ onMounted(() => {
 .blogstartup{
     /* border:2px solid yellow; */
     padding:3%;
+    padding-top:7%;
 }
 .blog-h3{
     /* border:2px solid green; */
@@ -251,30 +250,49 @@ margin:0% 0% 5%;
 }
 .categories-and-filter{
     /* border:2px solid red; */
-    width:23%;
+    width:33%;
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap:1rem;
 
 }
 .categories{
     /* border:2px solid yellow; */
-    border: 1px solid #B7B7D6;
+    /* border: 1px solid #B7B7D6; */
 border-radius: 6px;
-  display:flex;
-  justify-content:center;
-  align-items: center;
+  
   gap:1rem;
-  padding:15px;
+  padding:0px;
   font-family: 'Circular Std';
 font-style: normal;
 font-weight: 450;
 font-size: 20px;
 line-height: 25px;
 display: flex;
-align-items: center;
+align-items:left;
 
 color: #603F8B;
+}
+.categories input{
+    /* border:2px solid green; */
+    width:100%;
+    padding:15px;
+    border-radius: 6px;
+    font-family: 'Circular Std';
+font-style: normal;
+/* font-weight: 450; */
+font-size: 20px;
+line-height: 25px;
+
+    border: 1px solid #B7B7D6;
+}
+.categories input::placeholder{
+    /* border:2px solid yellow; */
+    font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 25px;
+    color:rgba(191, 188, 188, 0.742);
 }
 .filter{
     /* border:2px solid yellow; */
@@ -314,6 +332,7 @@ color: #603F8B;
 /* border:2px solid yellow; */
 border-radius: 12px;
 box-sizing: border-box;
+box-shadow: 2px 1px 5px #88888846;
 /* width:22%; */
 }
 .each-menu-top{
@@ -328,6 +347,7 @@ padding:0% 0;
 height:250px;
 width:90%;
 margin:auto;
+margin-top:6%;
 
 }
 .each-menu-top .svg{
@@ -568,22 +588,25 @@ margin:5% 0;
     margin-top:5%;
 
 
-}
+    }
+   
 
 /* start */
 .blog-h3{
-    /* border:2px solid green; */
+    /* border:10px solid green; */
     font-family: 'Recoleta Alt';
 font-style: normal;
 font-weight: 600;
 font-size: 36px;
 line-height: 49px;
+
 /* identical to box height */
 
 text-align: center;
 
 color: #1E1E4B;
 margin:0% 0% 5%;
+margin-top:20%;
 }
 .categories-and-filter{
     /* border:2px solid red; */
@@ -597,11 +620,9 @@ margin:0% 0% 5%;
     /* border:2px solid yellow; */
     border: 1px solid #B7B7D6;
 border-radius: 6px;
-  display:flex;
-  justify-content:center;
-  align-items: center;
+ 
   gap:1rem;
-  padding:15px;
+
   font-family: 'Circular Std';
 font-style: normal;
 font-weight: 450;
@@ -609,8 +630,27 @@ font-size: 20px;
 line-height: 25px;
 display: flex;
 align-items: center;
+}
+.categories input{
+    /* border:2px solid green; */
+    width:100%;
+    padding:15px;
+    border-radius: 6px;
+    font-family: 'Circular Std';
+font-style: normal;
+/* font-weight: 450; */
+font-size: 20px;
+line-height: 25px;
 
-color: #603F8B;
+    border: 1px solid #B7B7D6;
+}
+.categories input::placeholder{
+    /* border:2px solid yellow; */
+    font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 25px;
+    color:rgba(191, 188, 188, 0.742);
 }
 .filter{
     /* border:2px solid yellow; */
@@ -638,6 +678,7 @@ color: #603F8B;
     gap:7rem;
     row-gap:5rem;
     margin-top:5%;
+    margin-bottom: 7%;
 
 
 }
@@ -662,6 +703,7 @@ align-content: center;
 padding:10% 0;
 width:90%;
 margin:auto;
+margin-top:6%;
 }
 .each-menu-top svg{
     width:30%;
@@ -843,7 +885,8 @@ font-size: 15px;
 line-height: 40px;
 
 color: #1E1E4B;
-margin:5% 0;
+
+
 }
 
 
@@ -855,6 +898,7 @@ margin:5% 0;
     grid-template-columns:  repeat(8, 1fr);
     gap: 1.6rem;
     row-gap:2rem;
+    margin-top:5%;
 }
 .the-menu-bottom1{
     /* border:2px solid blue; */
@@ -1000,6 +1044,11 @@ margin:5% 0;
 
     }
 }
+.blogstartup{
+    /* border:2px solid yellow; */
+    padding:3%;
+    padding-top:1%;
+    }
 
 }
 </style>
