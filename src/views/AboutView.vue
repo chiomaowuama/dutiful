@@ -165,7 +165,7 @@ import whiteNav from '@/components/whiteNav.vue'
             <p>Booked</p>
           </div>
           <div class="the-fourth-about-imges-1b">
-            <img src="@/assets/calendar.png" alt="">
+            <img src="../assets/calendar.png" alt="">
           </div>
         </div>
         <div class="the-fourth-about-imges-2">
