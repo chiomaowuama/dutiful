@@ -1,6 +1,7 @@
 <script setup>
 import footerpage from '@/components/footerpage.vue'
 import whiteNav from '@/components/whiteNav.vue'
+import calenda from '@/assets/calendar.png'
 
 </script>
 <template>
@@ -165,7 +166,7 @@ import whiteNav from '@/components/whiteNav.vue'
             <p>Booked</p>
           </div>
           <div class="the-fourth-about-imges-1b">
-            <img src="../assets/calendar.png" alt="">
+            <img :src="calenda" alt="">  
           </div>
         </div>
         <div class="the-fourth-about-imges-2">
