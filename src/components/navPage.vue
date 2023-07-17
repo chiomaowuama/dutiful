@@ -19,19 +19,13 @@
                 </svg>
             </label>
             <ul>
-                <li><a href="#" class="search">
-                        <svg class="the-search" width="30" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="19.6106" cy="19.611" r="14.9809" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M30.0298 30.8086L35.9032 36.6667" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
+                
                 <li><RouterLink class="active brown" to="/">Business Directory</RouterLink></li>
-                <li><RouterLink to="/AboutView" class="brown">Features</RouterLink></li>
-                <li><RouterLink to="/businessbudget " class="brown">Pricing</RouterLink></li>
-                <li><RouterLink to="/blogpage" class="brown">Blog</RouterLink></li>
-                <li><RouterLink to="/loginpage">Login</RouterLink></li>
-                <li ><RouterLink to="/getstarted" class="li-border">Sign up</RouterLink></li>
+                <li><RouterLink to="/features" class="brown">Features</RouterLink></li>
+                <li><RouterLink to="/pricing" class="brown">Pricing</RouterLink></li>
+                <li><RouterLink to="/blog" class="brown">Blog</RouterLink></li>
+                <li><RouterLink to="/login">Login</RouterLink></li>
+                <li ><RouterLink to="/signup" class="li-border">Sign up</RouterLink></li>
             </ul>
         </div>
     
@@ -97,7 +91,7 @@ a:hover{
     border-left:none;
     border-right:none;
     border-top:none;
-    border:1p solid #532F82;
+    /* border:1px solid #532F82; */
     font-size:17px;
     font-weight: 500;
     transition:.5s;

@@ -570,7 +570,7 @@ line-height: 143.02%;
 /* or 29px */
 color: #656565;
 }
-@media screen and (max-width: 900px){
+@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation : portrait){
   .the-container1{
   background-color:white;
   padding-top:5%;

@@ -74,7 +74,7 @@ import whiteNav from '@/components/whiteNav.vue'
                     </div>
                 </div>
                 <button class="getstarted-btn"><RouterLink to="/otppage">Sign up</RouterLink></button>
-                <p class="signing-in">Already have an account? <RouterLink to="/loginpage">Login</RouterLink></p>
+                <p class="signing-in">Already have an account? <RouterLink to="/login">Login</RouterLink></p>
 
             </form>
         </div>
@@ -113,6 +113,7 @@ import whiteNav from '@/components/whiteNav.vue'
 }
 /* .buttonsection{
     border:2px solid yellow;
+    width:100%;
 } */
 .button-section-inside{
     /* border:2px solid red; */
@@ -173,13 +174,15 @@ import whiteNav from '@/components/whiteNav.vue'
 }
 
 /* the form part */
-/* .getstarted-div-form{
-    border:2px solid yellow;
-} */
+.getstarted-div-form{
+    /* border:2px solid yellow; */
+    width:100%;
+}
 .getstarted-form{
     /* border:2px solid yellow; */
     display:grid;
     gap:1rem;
+   
     width:40%;
     margin:auto;
 }
@@ -305,24 +308,30 @@ color: #A3B1BF;
     margin:1% auto;
     /* border:2px solid yellow; */
 }
-/* .buttonsection{
-    border:2px solid yellow;
-} */
+.buttonsection{
+    /* border:2px solid yellow; */
+    width:100%;
+    /* max-width:fit-content; */
+    /* width:100%; */
+}
 .button-section-inside{
     /* border:2px solid red; */
     width:70%;
     margin:auto;
-    display:flex;
-    gap:2.5rem
-    /* justify-content: center; */
-    /* align-content: center; */
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+    justify-content: center;
+    align-content: center;
+
 }
 .botton-section-inside1{
     /* border:2px solid blue; */
-    width:50%;
+    width:100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap:1rem;
     align-items: center;
     padding: 15px 5px;
     box-sizing: border-box;
@@ -340,16 +349,30 @@ color: #A3B1BF;
     position: absolute;
     width:25%;
     top:-15px;
-    left:130px;
+    left:90px;
    display:none
 }
 .botton-section-inside1:hover .click{
     /* border:2px solid yellow; */
    display:block;
-   border: 1px solid #603F8B;
+   /* border: 1px solid #603F8B; */
     
     
 }
+.second{
+    /* border:2px solid green; */
+    width:100%;
+    justify-content: center;
+    gap:1rem;
+}
+.second:hover .click {
+    /* border:2px solid red; */
+    /* width:80%; */
+    padding:0px 0px;
+    left:95px;
+    
+}
+
 /* the form part */
 /* .getstarted-div-form{
     border:2px solid yellow;
@@ -420,6 +443,7 @@ border:none;
 margin-top:5%;
 color: #FFFFFF;
 height: 58px;
+width:266px;
 /* border:2px solid green */
 /* left: 477px; */
 /* top: 1065px; */
@@ -451,13 +475,192 @@ color: #A3B1BF;
     left:75%;
 }
 }
-@media screen  and (max-width: 1180px) and (min-width: 950px){
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .getstated-container{
+    /* border:2px solid blue; */
+    padding:5% 0;
+    padding-top:15%;
+
+}
+.signup-message{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 20px;
+   width:70%;
+   margin:none;
+    color: #686868;
+}
+    .buttonsection{
+    /* border:2px solid yellow; */
+    width:100%;
+    /* max-width:fit-content; */
+    /* width:100%; */
+}
+.button-section-inside{
+    /* border:2px solid red; */
+    width:70%;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+    justify-content: center;
+    align-self: center;
+    padding-left:10%;
+
+}
+.botton-section-inside1{
+    /* border:2px solid blue; */
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1rem;
+    align-items: center;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 11px;
+    /* border: 1px solid #603F8B; */
+    border-radius: 11px;
+}
+
+.botton-section-inside1:hover{
+    border: 1px solid #603F8B;
+}
+.botton-section-inside1 .click{
+    /* border:2px solid green; */
+    position: absolute;
+    width:25%;
+    top:-15px;
+    left:140px;
+   display:none;
+}
+.botton-section-inside1:hover .click{
+    /* border:2px solid yellow; */
+   display:block;
+   /* border: 1px solid #603F8B; */
+    
+    
+}
+.second{
+    /* border:2px solid green; */
+    width:70%;
+    justify-content: center;
+    gap:1rem;
+}
+.second:hover .click {
+    /* border:2px solid red; */
+    /* width:80%; */
+    padding:0px 0px;
+    left:150px;
+    
+}
 
 
 
+/* the form part */
 
+.getstarted-form{
+    /* border:2px solid yellow; */
+    display:grid;
+    gap:1rem;
+    width:65%;
+    margin:auto;
+}
+.getstarted-form label{
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+    letter-spacing: -0.005em;
+    color: #603F8B;
+    
+}
+.getstarted-form input{
+    box-sizing: border-box;
+    width: 500px;
+    height: 50px;
+    outline: none;
+    font-size:20px;
+    background: #F8FAFD;
+    border: 2px solid #E7EAF1;
+    border-radius: 6px;
+}
+.getstarted-check{
+    /* border:2px solid red; */
+    padding:0;
+    display:grid;
+    grid-template-columns: 1fr 11fr;
+   
+}
 
+.getstarted-check p{
+    /* border:2px solid green; */
+  margin:3% 0
+  
+}
 
+.getstarted-check input{
+    width:20px;
+    /* border:2px solid yellow; */
+    /* margin:0px; */
+}
+
+.colored-span{
+    color: #603F8B;
+    font-weight: 700;
+}
+.getstarted-btn{
+    background: #532F82;
+box-shadow: 2px 8px 8px rgba(86, 86, 86, 0.25);
+border-radius: 6px;
+font-family: 'Circular Std';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 143.02%;
+/* identical to box height, or 26px */
+border:none;
+margin-top:5%;
+color: #FFFFFF;
+height: 58px;
+width: 500px;
+/* border:2px solid green */
+/* left: 477px; */
+/* top: 1065px; */
+}
+.signing-in{
+    font-family: 'Circular Std';
+font-style: normal;
+font-weight: 450;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+letter-spacing: -0.005em;
+color: #A3B1BF;
+}
+.signing-in a{
+    text-decoration: none;
+    color: #603F8B;
+    font-weight: 700;
+}
+.passwordpart{
+    /* border:2px solid green; */
+    width: 466px;
+    position: relative;
+}
+.eyes{
+    /* border:2px solid yellow; */
+    position: absolute;
+    width:50px;
+    top:20px;
+    left:90%;
+}
 
 
 }

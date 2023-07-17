@@ -20,11 +20,11 @@
         <ul>
             
             <li><RouterLink to="/">Business Directory</RouterLink></li>
-            <li><RouterLink to="/AboutView">Features</RouterLink></li>
-                <li><RouterLink to="/businessbudget">Pricing</RouterLink></li>
-                <li><RouterLink to="/blogpage">Blog</RouterLink></li>
-                <li><RouterLink class="active" to="/loginpage">LOGIN</RouterLink></li>
-                <li><RouterLink to="/getstarted"  class="li-border">SIGNUP</RouterLink></li>
+            <li><RouterLink to="/features">Features</RouterLink></li>
+                <li><RouterLink to="/pricing">Pricing</RouterLink></li>
+                <li><RouterLink to="/blog">Blog</RouterLink></li>
+                <li><RouterLink class="active" to="/login">LOGIN</RouterLink></li>
+                <li><RouterLink to="/signup"  class="li-border">SIGNUP</RouterLink></li>
 
         </ul>
     </div>

@@ -27,8 +27,8 @@ import whiteNav from '@/components/whiteNav.vue'
                     <p> <span class="colored-span"><RouterLink to="/forgotpassword">forgot password ?</RouterLink></span></p>
                     </div>
                 </div>
-                <button class="getstarted-btn"><RouterLink to="/otppage">login page</RouterLink></button>
-                <p class="signing-in">Dont have an account? <RouterLink to="/getstarted">Sign Up</RouterLink></p>
+                <button class="getstarted-btn"><RouterLink to="/otppage">login </RouterLink></button>
+                <p class="signing-in">Don't have an account? <RouterLink to="/signup">Sign Up</RouterLink></p>
 
             </form>
         </div>
@@ -173,6 +173,7 @@ import whiteNav from '@/components/whiteNav.vue'
     color: #603F8B;
     font-weight: 700;
     background-color: white;
+    /* border:2px solid yellow; */
 }
 .colored-span a {
     background-color: white;
@@ -340,6 +341,7 @@ color: #A3B1BF;
     background: #F8FAFD;
     border: 2px solid #E7EAF1;
     border-radius: 6px;
+    border:2px solid yellow;
 }
 .getstarted-check{
     /* border:2px solid red; */
@@ -408,6 +410,20 @@ color: #A3B1BF;
     width:50px;
     top:18px;
     left:85%;
+}
+}
+
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .logiin-forgetpassword{
+  /* border:2px solid green; */
+  width:500px;
+    padding:0;
+    display:flex; 
+    justify-content:end;
+    align-content: end;
+    background-color: white;
+    font-size:20px;
+   
 }
 }
 </style>

@@ -29,9 +29,10 @@ onMounted(() => {
 <template>
     <whiteNav/>
    <div class="getting-in-touch">
-        <div class="getting-in-touch-first">
-            <h3>Frequentyly Asked Questions</h3>
-            <p>Read the responses to some of our most asked questions to learn how Dutiful's unique solution addresses these issues.</p>
+        <div class="firstoneup">
+            <h3>Plans to Suit Your Business Budget</h3>
+            <p>our fully organized  plan deliver valuable content that showcases your service and skills, drives Lead, cover all features,and gives customers a clear idea to be able to choose your service</p>
+
         </div>
         <div class="questions-askedone">
             <div class="wrapperone shrinking"  v-for="(plan, id) in prices" :key="id" >
@@ -544,36 +545,39 @@ text-transform: capitalize;
 
 color: #656565;
 }
-.getting-in-touch-first{
+.firstoneup{
     /* border:2px solid yellow; */
-    background-color: #532F82;
-    background-image: url("@/assets/backgroungontouch.png");
-    background-size:contain;
-    height:250px;
-    padding-top:20%;
-    background-repeat: repeat;
-    
-
+    /* background-color: #532F82; */
+    /* background-image: url("@/assets/backgroungontouch.png"); */
+    /* background-size:contain; */
+    /* height:250px; */
+    padding:5% 0;
+    /* background-repeat: repeat; */
+    /* border:2px solid green; */
 }
-.getting-in-touch-first h3{
+.firstoneup h3{
     font-family: 'Recoleta Alt';
 font-style: normal;
 font-weight: 600;
 font-size: 36px;
 line-height: 49px;
+color: #1E1E4B;
+/* border:2px solid yellow; */
 /* identical to box height */
 text-align: center;
-color: #FFFFFF;
+
 }
-.getting-in-touch-first p{
+.firstoneup p{
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 450;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 143.02%;
+    width:75%;
+    margin:auto;
     /* identical to box height, or 29px */
     text-align: center;
-    color: #EDDFFF;
+    color: #656565;
 
 }
 /* the scrollside */
@@ -787,37 +791,43 @@ color: #656565;
     /* border: 2px solid green; */
 }
 @media screen and (max-width: 900px){
-    .getting-in-touch-first{
+   
+.firstoneup{
     /* border:2px solid yellow; */
-    background-color: #532F82;
-    background-image: url("@/assets/backgroungontouch.png");
-    background-size:contain;
-    height:250px;
-    padding-top:2%;
-    background-repeat: repeat;
-
+    /* background-color: #532F82; */
+    /* background-image: url("@/assets/backgroungontouch.png"); */
+    /* background-size:contain; */
+    /* height:250px; */
+    padding:2% 0;
+    padding-top:15%;
+    /* background-repeat: repeat; */
+    /* border:2px solid green; */
 }
-.getting-in-touch-first h3{
+.firstoneup h3{
     font-family: 'Recoleta Alt';
 font-style: normal;
 font-weight: 600;
-font-size: 26px;
-line-height: 49px;
+font-size: 28px;
+line-height: 45px;
+color: #1E1E4B;
+width:80%;
+margin:auto;
+/* border:2px solid yellow; */
 /* identical to box height */
 text-align: center;
-color: #FFFFFF;
+
 }
-.getting-in-touch-first p{
+.firstoneup p{
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 450;
-    font-size: 15px;
-    width:80%;
-    margin:auto;
+    font-size: 17px;
     line-height: 143.02%;
+    width:75%;
+    margin:auto;
     /* identical to box height, or 29px */
     text-align: center;
-    color: #EDDFFF;
+    color: #656565;
 
 }
 .questions-askedone{
@@ -829,7 +839,9 @@ color: #FFFFFF;
 
 }
 .questions-headone h2{
-    font-size: 24px;
+    font-size: 40px;
+    padding:4% 0;
+    /* border:2px solid green; */
 }
 .closedup{
     display:none;

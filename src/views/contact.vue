@@ -379,7 +379,8 @@ color: #656565;
 }
 
 .textarea-one{
-    border:2px solid green; box-sizing: border-box;
+    /* border:2px solid green;  */
+    box-sizing: border-box;
     width: 266px;
     height: 120px;
     outline: none;
@@ -415,6 +416,56 @@ width:100%;
 }
 .moving-low{
     margin-top:10%;
+}
+}
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .getting-in-touch-first{
+    border:2px solid yellow;
+    background-color: #532F82;
+    background-image: url("@/assets/backgroungontouch.png");
+    background-size:contain;
+    height:300px;
+    padding-top:5%;
+    background-repeat: repeat;
+}
+.getting-in-touch-first h3{
+    font-family: 'Recoleta Alt';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 49px;
+/* identical to box height */
+text-align: center;
+color: #FFFFFF;
+}
+.getting-in-touch-first p{
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    width:80%;
+    margin:auto;
+    line-height: 143.02%;
+    /* identical to box height, or 29px */
+    text-align: center;
+    color: #EDDFFF;
+
+}
+.textarea-one{
+    /* border:2px solid green;  */
+    box-sizing: border-box;
+    width: 500px;
+    height: 120px;
+    outline: none;
+    font-size:20px;
+    /* margin-left:10%; */
+    background: #F8FAFD;
+    border: 2px solid #E7EAF1;
+    border-radius: 6px;
+    /* margin-left:-50%; */
+}
+.getstarted-btn-new{
+    width:500px;
 }
 }
 </style>

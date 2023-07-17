@@ -23,7 +23,7 @@ async function blogdetails(){
         }
 
     })   
-  
+  console.log(blogs);
 }
 async function searchAll() {
 //   const searchTerm = search.value;
@@ -91,10 +91,12 @@ onMounted(() => {
        
         <div class="blogs-menu"  v-if="search == null" >
             <div class="each-menu" v-for="(blog, id) in blogs" :key="id" >
-                <div class="each-menu-top">
-                    
-                    <img :src="blog.picture" alt="" class="svg" >
-                </div>
+                <RouterLink to="/detail">
+                    <div class="each-menu-top">
+                        
+                        <img :src="blog.picture" alt="" class="svg" >
+                    </div>
+                </RouterLink>
                 <div class="the-menu-bottom">
                     <p class="the-menu-bottom-p">{{ blog.pictitle }}</p>
                     <div class="bottom-blog">
@@ -361,7 +363,7 @@ margin-top:6%;
 }
 .bottom-blog{
     /* border:2px solid red; */
-    margin-top:10%;
+    margin:5% 0;
     display:flex;
     justify-content:space-between;
     align-content: center;
@@ -418,7 +420,8 @@ margin-top:6%;
     /* or 150% */
     color: #1E1E4B;
     /* border:2px solid yellow; */
-    margin:5% 0;
+    height:60px;
+    margin:5%  0;
     padding:0 5%;
 }
 
@@ -527,7 +530,7 @@ width:170px;
     line-height: 30px;
     /* or 150% */
     color: #1E1E4B;
-    /* border:2px solid yellow; */
+    border:2px solid yellow;
     height:110px;
     width:90%;
     margin-left:5%;
@@ -768,7 +771,7 @@ margin-top:6%;
     line-height: 30px;
     /* or 150% */
     color: #1E1E4B;
-    /* border:2px solid yellow; */
+    border:2px solid yellow;
     margin:5% 0;
     }
 /* the down menu */
@@ -994,7 +997,7 @@ width:170px;
     line-height: 30px;
     /* or 150% */
     color: #1E1E4B;
-    /* border:2px solid yellow; */
+    border:2px solid yellow;
     height:110px;
     width:90%;
     margin-left:5%;

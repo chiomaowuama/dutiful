@@ -5,21 +5,21 @@
   <div class="footer-one">
     <ul>
       <li class="footer-one-head">Comapny</li>
-      <li><RouterLink to="/aboutDutiful">About</RouterLink></li>
-      <li><RouterLink to="/getintouch">Contact us</RouterLink></li>
-      <li><RouterLink to="/askedquestion">FAQs</RouterLink></li>
+      <li><RouterLink to="/about">About</RouterLink></li>
+      <li><RouterLink to="/contact">Contact us</RouterLink></li>
+      <li><RouterLink to="/faqs">FAQs</RouterLink></li>
     </ul>
     <ul>
       <li class="footer-one-head">Quick links</li>
       <li>find services</li>
-      <li><RouterLink to="/businessbudget">pricing & plans</RouterLink></li>
+      <li><RouterLink to="/pricing">pricing & plans</RouterLink></li>
       <li>List your business</li>
     </ul>
     <ul>
       <li class="footer-one-head">Resources</li>
-      <li><RouterLink to="/blogpage">Blog</RouterLink></li>
-      <li><RouterLink to="/promotingdutiful">Affiliate Program</RouterLink></li>
-      <li><RouterLink to="/askedquestion">FAQs</RouterLink></li>
+      <li><RouterLink to="/blog">Blog</RouterLink></li>
+      <li><RouterLink to="/affiliate">Affiliate Program</RouterLink></li>
+
     </ul>
     <ul>
       <li class="footer-one-head">More from Dutiful</li>

@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import businessbudget from '../views/businessbudget.vue'
-import leadpage from '../views/leadpage.vue'
-import blogpage from '../views/blogpage.vue'
-import askedquestion from '../views/askedquestion.vue'
-import getintouch from '../views/getintouch.vue'
-import promotingdutiful from '../views/promotingdutiful.vue'
+import pricing from '../views/pricing.vue'
+import detail from '../views/detail.vue'
+import blog from '../views/blog.vue'
+import faqs from '../views/faqs.vue'
+import contact from '../views/contact.vue'
+import affiliate from '../views/affiliate.vue'
 import otpsendingpage from '../views/otpsendingpage.vue'
 import otppage from '../views/otppage.vue'
 import forgotpassword from '../views/forgotpassword.vue'
 import resetpassword from '../views/resetpassword.vue'
-import loginpage from '../views/loginpage.vue'
-import getstarted from '../views/getstarted.vue'
-import aboutDutiful from '../views/aboutDutiful.vue'
-import AboutView from '../views/AboutView.vue'
+import login from '../views/login.vue'
+import signup from '../views/signup.vue'
+import about from '../views/about.vue'
+import features from '../views/features.vue'
 import homePage from '../views/homePage.vue'
 
 const router = createRouter({
@@ -24,24 +24,24 @@ const router = createRouter({
       component: homePage
     },
     {
-      path: '/AboutView',
-      name: 'AboutView',
-      component: AboutView
+      path: '/features',
+      name: 'features',
+      component: features
     },
     {
-      path: '/aboutDutiful',
-      name: 'aboutDutiful',
-      component: aboutDutiful
+      path: '/about',
+      name: 'about',
+      component: about
     },
     {
-      path: '/getstarted',
-      name: 'getstarted',
-      component: getstarted
+      path: '/signup',
+      name: 'signup',
+      component: signup
     },
     {
-      path: '/loginpage',
-      name: 'loginpage',
-      component:loginpage
+      path: '/login',
+      name: 'login',
+      component:login
     },
     {
       path: '/forgotpassword',
@@ -64,34 +64,34 @@ const router = createRouter({
       component:otpsendingpage
     },
     {
-      path: '/promotingdutiful',
-      name: 'promotingdutiful',
-      component:promotingdutiful
+      path: '/affiliate',
+      name: 'affiliate',
+      component:affiliate
     },
     {
-      path: '/getintouch',
-      name: 'getintouch',
-      component:getintouch
+      path: '/contact',
+      name: 'contact',
+      component:contact
     },
     {
-      path: '/askedquestion',
-      name: 'askedquestion',
-      component:askedquestion
+      path: '/faqs',
+      name: 'faqs',
+      component:faqs
     },
     {
-      path: '/blogpage',
-      name: 'blogpage',
-      component:blogpage
+      path: '/blog',
+      name: 'blog',
+      component:blog
     },
     {
-      path: '/leadpage',
-      name: 'leadpage',
-      component:leadpage
+      path: '/detail',
+      name: 'detail',
+      component:detail
     },
     {
-      path: '/businessbudget',
-      name: 'businessbudget',
-      component:businessbudget
+      path: '/pricing',
+      name: 'pricing',
+      component:pricing
     },
     
    

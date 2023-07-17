@@ -29,7 +29,7 @@ import whiteNav from '@/components/whiteNav.vue'
                 </div>
                
                 <button class="getstarted-btn">Reset Password</button>
-                <p class="signing-in">Or <RouterLink to="/getstarted">Create new acount</RouterLink></p>
+                <p class="signing-in">Or <RouterLink to="/signup">Create new acount</RouterLink></p>
 
             </form>
         </div>
