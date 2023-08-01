@@ -53,7 +53,7 @@ import whiteNav from '@/components/whiteNav.vue'
     margin-left:10%;
 }
 .signup-message2{
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 450;
@@ -108,7 +108,7 @@ import whiteNav from '@/components/whiteNav.vue'
     border: 1px solid #603F8B;
 }
 .botton-section-inside1 .click{
-    border:2px solid green;
+    /* border:2px solid green; */
     position: absolute;
     width:25%;
     top:-15px;
@@ -116,7 +116,7 @@ import whiteNav from '@/components/whiteNav.vue'
    display:none
 }
 .botton-section-inside1:hover .click{
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
    display:block;
    border: 1px solid #603F8B;
     
@@ -229,7 +229,7 @@ color: #A3B1BF;
 
 }
 .the-images-icon{
-    border:2px solid green;
+    /* border:2px solid green; */
     width:40%;
     background-color: #F8F3FF;
     border-radius: 70px;

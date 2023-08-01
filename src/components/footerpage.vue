@@ -60,7 +60,7 @@
     </div>
   </div>
   <div class="footer-end">
-    <p>@ &nbsp; 2022 Dutiful</p>
+    <p class="last-thing">@ &nbsp; 2022 Dutiful</p>
     <p>Terms of service </p>
     <p>Privacy policy</p>
     <p>Disclaimer</p>
@@ -123,7 +123,7 @@ margin-bottom: 10%;
 }
 
 .footer-double{
-  border:2px solid yellow;
+  /* border:2px solid yellow; */
   border: 1px solid #63428E;
   border-left: none;
   border-right: none;
@@ -210,6 +210,7 @@ color: #FFFFFF;
     display:flex;
     flex-direction: column-reverse;
   }
+ 
   .footer-right{
   width:25%;
   font-family: 'Circular Std';
@@ -235,10 +236,12 @@ color: #FFFFFF;
   font-size: 18px;
   line-height: 20px;
   color: #B6B6E5;
-  justify-content: space-around;
+  justify-content: start;
+ gap:1rem;
+ margin-left:15%;
 }
 .footer-double{
-  border:2px solid yellow;
+  /* border:2px solid yellow; */
   border: 1px solid #63428E;
   border-left: none;
   border-right: none;
@@ -249,7 +252,7 @@ color: #FFFFFF;
 }
 .footer-left{
   /* border:2px solid green; */
-  width:90%;
+  width:70%;
   margin:auto;
   font-family: 'Circular Std';
 font-style: normal;
@@ -259,10 +262,12 @@ line-height: 23px;
 padding:3% 0;
 color: #FFFFFF;
   display:flex;
-  justify-content: space-around;
+  justify-content:start;
+  gap:1.5rem;
+  margin-left:auto;
 }
 .footer-right{
-  width:100%;
+  width:85%;
   font-family: 'Circular Std';
   font-style: normal;
   font-weight: 500;
@@ -270,9 +275,11 @@ color: #FFFFFF;
   line-height: 23px;
   padding:3% 0;
   color: #FFFFFF;
-  
+  /* border:2px solid green; */
   display:flex;
-  justify-content: space-around;
+  justify-content: start;
+  gap:1rem;
+  margin-left:auto;
 }
 }
 </style>

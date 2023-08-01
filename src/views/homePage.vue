@@ -2,6 +2,7 @@
 import navPage from '@/components/navPage.vue'
 import footerpage from '@/components/footerpage.vue'
 
+
 </script>
 <template>
   <div>
@@ -26,7 +27,7 @@ import footerpage from '@/components/footerpage.vue'
 
           </div>
           <div class="search-btn search-control">
-            <button>search</button>
+            <button>Search</button>
           </div>
         </div>
         <div class="the-search-info">
@@ -39,7 +40,7 @@ import footerpage from '@/components/footerpage.vue'
         </div>
       </div>
       <div class="the-rightside">
-        <p class="the-watch">watch The Video</p>
+        <p class="the-watch">WATCH THE VIDEO</p>
         <img src="@/assets/firstpic.png" alt="" class="the-image">
         <svg class="youtube" width="124" height="88" viewBox="0 0 124 88" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_204_1508)">
@@ -326,10 +327,10 @@ import footerpage from '@/components/footerpage.vue'
       </div>
     </div>
     <div class="section-five">
-      <h2 class="section-five-h2 pushdown">Why business and enterpreneurs chose Us</h2>
+      <h2 class="section-five-h2 pushdown">Why business  and enterpreneurs choose Us</h2>   
       <div class="section-five-four">
         <div class="section-five-four-each">
-           <div class="section-five-four-each-top">
+          <div class="section-five-four-each-top">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="25" cy="25" r="25" fill="#F7F0FF"/>
             <path d="M33 20V30C33 34 32 35 28 35H22C18 35 17 34 17 30V20C17 16 18 15 22 15H28C32 15 33 16 33 20Z" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -339,11 +340,11 @@ import footerpage from '@/components/footerpage.vue'
             <div class="smallie-five">
             <p>User Friendly</p>
             </div>
-           </div>
-           <p>Easy to use and save time,on both mobile and desktop.</p>
+          </div>
+          <p>Easy to use and save time,on both mobile and desktop.</p>
         </div>
         <div class="section-five-four-each">
-           <div class="section-five-four-each-top">
+          <div class="section-five-four-each-top">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="25" cy="25" r="25" fill="#F7F0FF"/>
               <path d="M25 21.5V16" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -362,11 +363,11 @@ import footerpage from '@/components/footerpage.vue'
               </svg>
 
             <p>User Friendly</p>
-           </div>
-           <p>Weve added elements that provide the best experience to users.</p>
+          </div>
+          <p>Weve added elements that provide the best experience to users.</p>
         </div>
         <div class="section-five-four-each">
-           <div class="section-five-four-each-top">
+          <div class="section-five-four-each-top">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="25" cy="25" r="25" fill="#F7F0FF"/>
             <path d="M16.1699 20.4399L24.9999 25.5499L33.7699 20.4699" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -375,11 +376,11 @@ import footerpage from '@/components/footerpage.vue'
             </svg>
 
             <p>User Friendly</p>
-           </div>
-           <p>Enjoy full expereience to increase your brand awareness ease of doing businessed and business reputation.</p>
+          </div>
+          <p>Enjoy full expereience to increase your brand awareness ease of doing businessed and business reputation.</p>
         </div>
         <div class="section-five-four-each">
-           <div class="section-five-four-each-top">
+          <div class="section-five-four-each-top">
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="25" cy="25" r="25" fill="#F7F0FF"/>
             <path d="M20 21H17C15.9 21 15 20.1 15 19V17C15 15.9 15.9 15 17 15H20C21.1 15 22 15.9 22 17V19C22 20.1 21.1 21 20 21Z" stroke="#603F8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -393,80 +394,187 @@ import footerpage from '@/components/footerpage.vue'
             </svg>
 
             <p>User Friendly</p>
-           </div>
-           <p>Benefit from task automation integrated database and progams that align with current market trends.</p>
+          </div>
+          <p>Benefit from task automation integrated database and progams that align with current market trends.</p>
         </div>
       </div>
-      <h2 class="section-five-h2">Why business and enterpreneurs chose Us</h2>
+      <h2 class="section-five-h2">Why business say about Dutiful</h2>
 
     </div>
-    <div class="section-six">
-      <div class=" section-five-four moving">
-        <div class="section-five-four-each each-five">
-           <div class="section-five-four-each-top">
-              <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five little-fivetext">
-               <p>Adeola fatoyinbo</p>
+    <div class="section-six ">
+      <div class="galary-wrap">
+        <svg width="95" id="backbtn" height="96" viewBox="0 0 95 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="46" cy="45" r="40" fill="#D9D9D9"/>
+<g filter="url(#filter0_d_5341_2684)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M86 45C86 67.0914 68.0914 85 46 85C23.9086 85 6 67.0914 6 45C6 22.9086 23.9086 5 46 5C68.0914 5 86 22.9086 86 45ZM44.1003 38.3997C44.3932 38.6926 44.3932 39.1675 44.1003 39.4604L39.3107 44.25H54.4999C54.9141 44.25 55.2499 44.5858 55.2499 45C55.2499 45.4142 54.9141 45.75 54.4999 45.75H39.3106L44.1003 50.5397C44.3932 50.8326 44.3932 51.3075 44.1003 51.6004C43.8074 51.8933 43.3326 51.8933 43.0397 51.6004L36.9697 45.5304C36.829 45.3897 36.75 45.199 36.75 45.0001C36.75 44.8011 36.829 44.6104 36.9697 44.4697L43.0397 38.3997C43.3326 38.1068 43.8074 38.1068 44.1003 38.3997Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_5341_2684" x="0.181818" y="0.636364" width="94.5455" height="94.5455" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1.45455" dy="2.90909"/>
+<feGaussianBlur stdDeviation="3.63636"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.783333 0 0 0 0 0.783333 0 0 0 0 0.783333 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5341_2684"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5341_2684" result="shape"/>
+</filter>
+</defs>
+          </svg>
+        <div class="galary">
+          <div class=" section-five-four moving  small-galary">
+            <div class="section-five-four-each each-five scoll-pack">
+              <div class="section-five-four-each-top">
+                  <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
               </div>
-           </div>
-           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
-<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
-<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
-<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
-<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
-            </svg>           
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>           
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+              </div>
+            <div class="section-five-four-each showing scoll-pack">
+              <div class="section-five-four-each-top">
+                  <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
+              </div> 
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>
+              
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+            </div>
+            <div class="section-five-four-each showing scoll-pack">
+              <div class="section-five-four-each-top">
+                <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
+              </div>
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+            </div>
+            <div class="section-five-four-each showing scoll-pack">
+              <div class="section-five-four-each-top">
+                <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
+              </div>
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+            </div>
           </div>
-        <div class="section-five-four-each showing">
-           <div class="section-five-four-each-top">
-              <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five little-fivetext">
-               <p>Adeola fatoyinbo</p>
+          <div class=" section-five-four moving  small-galary">
+            <div class="section-five-four-each each-five scoll-pack">
+              <div class="section-five-four-each-top">
+                  <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
               </div>
-           </div> 
-           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
-<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
-<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
-<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
-<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
-            </svg>
-          
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
-        </div>
-        <div class="section-five-four-each showing">
-           <div class="section-five-four-each-top">
-            <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five little-fivetext">
-               <p>Adeola fatoyinbo</p>
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>           
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
               </div>
-           </div>
-           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
-<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
-<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
-<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
-<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
-            </svg>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
-        </div>
-        <div class="section-five-four-each showing">
-           <div class="section-five-four-each-top">
-            <img src="@/assets/dp.png" alt="">
-              <div class="smallie-five little-fivetext">
-               <p>Adeola fatoyinbo</p>
+            <div class="section-five-four-each showing scoll-pack">
+              <div class="section-five-four-each-top">
+                  <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
+              </div> 
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>
+              
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+            </div>
+            <div class="section-five-four-each showing scoll-pack">
+              <div class="section-five-four-each-top">
+                <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
               </div>
-           </div>
-           <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
-<path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
-<path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
-<path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
-<path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
-            </svg>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+            </div>
+            <div class="section-five-four-each showing scoll-pack">
+              <div class="section-five-four-each-top">
+                <img src="@/assets/dp.png" alt="">
+                  <div class="smallie-five little-fivetext">
+                  <p>Adeola fatoyinbo</p>
+                  </div>
+              </div>
+              <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L10.3511 4.76393L15.6085 5.52786L11.8042 9.23607L12.7023 14.4721L8 12L3.29772 14.4721L4.19577 9.23607L0.391548 5.52786L5.64886 4.76393L8 0Z" fill="#FCC945"/>
+    <path d="M28 0L30.3511 4.76393L35.6085 5.52786L31.8042 9.23607L32.7023 14.4721L28 12L23.2977 14.4721L24.1958 9.23607L20.3915 5.52786L25.6489 4.76393L28 0Z" fill="#FCC945"/>
+    <path d="M48 0L50.3511 4.76393L55.6085 5.52786L51.8042 9.23607L52.7023 14.4721L48 12L43.2977 14.4721L44.1958 9.23607L40.3915 5.52786L45.6489 4.76393L48 0Z" fill="#FCC945"/>
+    <path d="M68 0L70.3511 4.76393L75.6085 5.52786L71.8042 9.23607L72.7023 14.4721L68 12L63.2977 14.4721L64.1958 9.23607L60.3915 5.52786L65.6489 4.76393L68 0Z" fill="#FCC945"/>
+    <path d="M88 0L90.3511 4.76393L95.6085 5.52786L91.8042 9.23607L92.7023 14.4721L88 12L83.2977 14.4721L84.1958 9.23607L80.3915 5.52786L85.6489 4.76393L88 0Z" fill="#EDEDED"/>
+                </svg>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+            </div>
+          </div>
         </div>
+        <svg width="95" id="nextbtn" height="96" viewBox="0 0 95 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="40" cy="40" r="40" transform="matrix(-1 0 0 1 86 5)" fill="#603F8B"/>
+<g filter="url(#filter0_d_134_1918)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 45C6 67.0914 23.9086 85 46 85C68.0914 85 86 67.0914 86 45C86 22.9086 68.0914 5 46 5C23.9086 5 6 22.9086 6 45ZM47.8997 38.3997C47.6068 38.6926 47.6068 39.1675 47.8997 39.4604L52.6893 44.25H37.5001C37.0859 44.25 36.7501 44.5858 36.7501 45C36.7501 45.4142 37.0859 45.75 37.5001 45.75H52.6894L47.8997 50.5397C47.6068 50.8326 47.6068 51.3075 47.8997 51.6004C48.1926 51.8933 48.6674 51.8933 48.9603 51.6004L55.0303 45.5304C55.171 45.3897 55.25 45.199 55.25 45.0001C55.25 44.8011 55.171 44.6104 55.0303 44.4697L48.9603 38.3997C48.6674 38.1068 48.1926 38.1068 47.8997 38.3997Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_134_1918" x="0.181818" y="0.636364" width="94.5455" height="94.5455" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1.45455" dy="2.90909"/>
+<feGaussianBlur stdDeviation="3.63636"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.783333 0 0 0 0 0.783333 0 0 0 0 0.783333 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_134_1918"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_134_1918" result="shape"/>
+</filter>
+</defs>
+        </svg>
       </div>
     </div>
   </div>
@@ -483,13 +591,14 @@ import footerpage from '@/components/footerpage.vue'
   display:grid;
   grid-template-columns: 50% 50%;
 }
+
 /* .the-leftside{
   border:2px solid yellow;
 } */
 .underline{
   /* border:2px solid red; */
   margin-left:60%;
-  width:180px;
+  width:200px;
 }
 .search-bar{
   /* border:2px solid yellow; */
@@ -499,7 +608,7 @@ import footerpage from '@/components/footerpage.vue'
   border-radius:6px;
   margin-top: 9%;
   display:grid;
-  grid-template-columns:2fr 2fr 1fr;
+  grid-template-columns:3fr 3fr 2fr;
 }
 .search-control{
   /* border:2px solid red; */
@@ -507,7 +616,7 @@ import footerpage from '@/components/footerpage.vue'
   justify-content:stretch;
   align-self: center;
   padding-left:10px;
-  gap:15px;
+  gap:10px;
   
 }
 .search-location{
@@ -519,7 +628,7 @@ import footerpage from '@/components/footerpage.vue'
   display:flex;
   justify-content:left;
   align-content:center;
-  gap:1.5rem;
+  gap:10px;
   padding:15px 0;
   padding-left:20px;
 }
@@ -557,7 +666,7 @@ color: #7F6A9B;
   font-weight: 700;
   font-size: 56px;
   line-height: 49px;
-  width:93%;
+  width:100%;
   color: #FFFFFF;
   /* text-align:center; */
   /* border:2px solid yellow; */
@@ -567,10 +676,10 @@ color: #7F6A9B;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 113.02%;
+  line-height:143.023%;
   color: #EDDFFF;
   /* border:2px solid red; */
-  width:93%;
+  width:100%;
   margin:10px 0 ;
 
   /* text-align: center; */
@@ -582,7 +691,7 @@ color: #7F6A9B;
 }
 .the-watch{
   background-color:#E2A4FF;
-  width:20%;
+  width:25%;
   padding:2px;
   font-size:15px;
   margin-left:60%;
@@ -759,10 +868,10 @@ margin:10% auto;
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
-line-height: 143.02%;
+line-height: 143.023%;
 margin:5% 0;
 /* identical to box height, or 26px */
-padding:18px 40px;
+padding: 22px 50px;
 color: #FFFFFF;
 background: #603F8B;
 border-radius: 6px;
@@ -1010,14 +1119,17 @@ color: #6C6C6C;
   padding:3%;
   gap:2rem;
 }
+
 .section-five-four-each{
   /* border:2px solid black; */
+  /* width:70%; */
   background: #FFFFFF;
   box-shadow: 2px 4px 10px rgba(200, 200, 200, 0.25);
   border-radius: 8px;
   padding:7%;
  
 }
+
 .section-five-four-each p{
   /* border:2px solid yellow; */
   font-family: 'Circular Std';
@@ -1091,7 +1203,50 @@ color: #6C6C6C;
   margin-left:5%;
   margin-top:5%;
 }
-@media screen and (max-width: 900px){
+/* scroll */
+.galary{
+  /* border:2px solid red; */
+  width:90%;
+  display:flex;
+  overflow-x:scroll;
+}
+.small-galary{
+  /* border:2px solid yellow; */
+  flex:none;
+  width:100%;
+  /* height:500px; */
+}
+.galary::-webkit-scrollbar{
+  display:none;
+}
+.scoll-pack{
+  /* border:2px solid red; */
+  transition:transform 0.5s;
+  /* width:100%; */
+}
+.galary-wrap{
+  /* border:2px solid green; */
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  /* margin:10% auto; */
+  /* wi */
+}
+#backbtn{
+  /* border:2px solid green; */
+  width:10%;
+  cursor:pointer;
+}
+#nextbtn{
+  /* border:2px solid green; */
+  width:10%;
+  cursor:pointer;
+}
+.scoll-pack:hover{
+  cursor:pointer;
+  transform:scale(1.1);
+}
+@media only screen and (min-width: 200px) and (max-width: 767px) and (orientation : portrait){
   .the-container{
   background-color: #532F82;
   width:100%;
@@ -1107,7 +1262,7 @@ color: #6C6C6C;
 } */
 .underline{
   /* border:2px solid red; */
-  margin-left:45%;
+  margin-left:40%;
   width:110px;
   }
 .search-bar{
@@ -1181,12 +1336,13 @@ color: #7F6A9B;
   }
 /* the right sidde */
 .the-rightside{
-  /* border:2px solid green; */
+  /* border:2px solid #008000; */
+  
   position:relative;
   }
 .the-watch{
   background-color:#E2A4FF;
-  width:20%;
+  width:30%;
   padding:2px;
   font-size:10px;
   margin-left:60%;
@@ -1219,7 +1375,7 @@ color: #7F6A9B;
   left:220px;
 }
 .the-image{
-  width: 328px;
+  width: 340px;
   height: 255px;
   margin-left:2.3%;
   position:absolute;
@@ -1432,16 +1588,17 @@ border:none;
 .purple-smallsection{
   /* border:2px solid blue; */
   display:grid;
-  grid-template-columns: 40% 80%;
-  width:80%;
-  margin:0 5%;
+  grid-template-columns: 25% 70%;
+  width:100%;
+  margin:0 0%;
 }
 .purple-smallsection h3{
   font-family: 'Circular Std';
 font-style: normal;
 font-weight: 500;
-font-size: 32px;
+font-size: 28px;
 line-height: 51px;
+/* border:2px solid red; */
 /* identical to box height */
 color: #FFFFFF;
 }
@@ -1449,24 +1606,26 @@ color: #FFFFFF;
   font-family: 'Circular Std';
 font-style: normal;
 font-weight: 500;
-font-size: 22px;
+font-size: 20px;
 line-height: 30px;
 color: #ECDDFF;
+/* border:2px solid green; */
 }
 .purple-numbers-text{
   /* border:2px solid black; */
-  text-align: center;
+  text-align: start;
+
 }
 .purple-aside{
   font-family: 'Circular Std';
 font-style: normal;
 font-weight: 450;
-font-size: 18px;
+font-size: 16px;
 line-height: 139.02%;
 /* or 25px */
 color: #E6D3FF;
 margin-top:4%;
-width:83%;
+width:100%;
 /* border:2px solid yellow; */
 margin-left:5%;
 
@@ -1688,4 +1847,613 @@ color: #6C6C6C;
   display:none;
 }
 }
+@media screen  and (min-width: 768px) and (max-width: 1180px){
+  .the-container{
+  background-color: #532F82;
+  width:100%;
+  padding-top:5%;
+  padding-bottom:5%;
+  /* border:4px solid green; */
+  padding-left:3%;
+  padding-right:3%;
+  display:grid;
+  grid-template-columns: 100%;
+  }
+  /* .the-leftside{
+  border:2px solid yellow;
+} */
+.underline{
+  /* border:2px solid red; */
+  margin-left:40%;
+  width:210px;
+  }
+.search-bar{
+  /* border:2px solid yellow; */
+  background: #391766;
+  width:95%;
+  margin:auto;
+  padding:5px;
+  border-radius:6px;
+  margin-top: 15%;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr)
+  }
+ 
+
+.search-control{
+  /* border:2px solid red; */
+ display:flex;
+ justify-content:center;
+ align-items:center;
+  padding-left:10px;
+  gap:4px;
+  
+  }
+.search-control p{
+  font-family: 'Circular Std';
+font-style: normal;
+font-weight: 450;
+font-size: 25px;
+line-height: 25px;
+display: flex;
+align-items:right;
+/* border:2px solid green; */
+color: #7F6A9B;
+  }
+
+.search-btn button{
+  width:100%;
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 22px;
+  padding:10px 15px;
+  text-align: center;
+  color: #603F8B;
+  }
+.the-search-info{
+  /* border:2px solid yellow; */
+  margin-top:5%;
+  }
+.the-search-info h3{
+  font-family: 'Recoleta Alt';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 49px;
+  color: #FFFFFF;
+  /* border:2px solid green; */
+  /* text-align:center; */
+  }
+.the-search-info p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 143.02%;
+  color: #EDDFFF;
+  /* border:2px solid red; */
+  width:95%;
+  margin:45px 0 ;
+  /* text-align: center; */
+  }
+  /* the right sidde */
+.the-rightside{
+  /* border:2px solid green; */
+  height:490px;
+  width:100%;
+  margin-top:2%;
+  position:relative;
+  }
+.the-watch{
+  background-color:#E2A4FF;
+  width:35%;
+  padding:10px;
+  font-size:25px;
+  text-align:center;
+  margin-left:60%;
+  position:absolute;
+  z-index:2;
+  top:-10px;
+  /* border:2px solid yellow; */
+  }
+.youtube{
+  /* border:2px solid green; */
+  position:absolute;
+  width:180px;
+  z-index:1;
+  top:180px;
+  left:40%;
+  }
+.sparks{
+  /* border:2px solid red; */
+  position:absolute;
+  width:50px;
+  top:-40px;
+  left:-30px;
+}
+.swigle-line{
+  width:300px;
+  border:8px solid red;
+  position:absolute;
+  width:100px;
+  top:270px;
+  left:220px;
+}
+.the-image{
+  width: 95%;
+  height: 475px;
+  margin-left:2.3%;
+  position:absolute;
+  z-index:1;
+  
+  /* border:1px solid red; */
+}
+/* section 2  */
+/* .section-two{
+  border:2px solid green;
+  } */
+  .second-section-text h3{
+  font-family: 'Recoleta Alt';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  padding:10px 0;
+  /* identical to box height */
+  text-align: center;
+  color: #1E1E4B;
+  /* border:2px solid green; */
+
+  }
+.second-section-text p{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 29px;
+text-align: center;
+color: #656565;
+/* border:2px solid red; */
+width:70%;
+margin:auto;
+  }
+.theangle{
+  /* border:2px solid green; */
+  width:100%;
+  margin-top:5%;
+ 
+  }
+.theangle svg{
+  /* background-color: #F5F5F5; */
+  /* border:2px solid red; */
+  display:none;
+  width:30%;
+  margin-left:35%;
+  
+  }
+.section-of-four{
+  /* border:2px solid red; */
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:  1fr;
+  padding:0 3% ;
+
+  }
+.section-of-two{
+  /* border:2px solid yellow; */
+  width:98%;
+  display:grid;
+
+ grid-template-columns: 1fr;
+
+  align-content:center;
+  gap:3.5rem;
+  }
+.section-two-eachbox{
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px #888888;
+  display:grid;
+  width:50%;
+  border-radius: 26px;
+  justify-content:center;
+  align-items: center;
+  border: 1px solid #EEEEFF;
+  position:relative;
+  /* border:2px solid green; */
+  text-align: center;
+  margin:auto
+
+  }
+.section-two-eachbox .icons-top{
+  /* border:2px solid yellow; */
+  margin:auto;
+  }
+.section-two-eachbox p{
+  font-family: 'Circular Std';
+  
+font-style: normal;
+font-weight: 450;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+color: #464646;
+width:90% ;
+margin:10% auto;
+/* border:2px solid green; */
+
+  }
+.purple{
+  background-color: #532F82;
+  position:relative;
+
+  }
+.purple p{
+  color:white;
+  
+  }
+.under-text{
+  /* border:2px solid red; */
+  position:absolute;
+  top:50px;
+  left:95px;
+  width:90px;
+  display:none;
+  }
+.under-text-1{
+  /* border:2px solid red; */
+  position:absolute;
+  top:68px;
+  left:149px;
+  width:110px;
+  }
+.the-under-arrow{
+  /* border:2px solid red; */
+  margin-top:3px;
+  padding:0 3%;
+  display:grid;
+  display:none;
+  grid-template-columns: 1fr 1fr;
+  background-color:white;
+  }
+.each-arrow{
+  /* border:2px solid red; */
+  background-color:white;
+  z-index:1;
+
+  }
+.each-arrow svg{
+  width:70%;
+  /* border:2px solid green; */
+  margin:0 15% ;
+  }
+.second-section-btn{
+  /* border:2px solid rgb(12, 12, 67); */
+  text-align: center;
+  margin-top:10px;
+  }
+.second-section-btn button{
+  font-family: 'Circular Std';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 143.02%;
+margin:5% 0;
+/* identical to box height, or 26px */
+padding:10px 30px;
+color: #FFFFFF;
+background: #603F8B;
+border-radius: 6px;
+border:none;
+  }
+
+    /* section three */
+.section-three{
+  /* border:2px solid green; */
+  background: #F6F7F9;
+  position: relative;
+  /* padding-bottom: 60%;; */
+}
+.section-three-bigpic{
+  /* border:2px solid red; */
+  text-align: center;
+
+}
+.section-three-bigpic h3{
+  /* border:2px solid green; */
+  font-family: 'Recoleta Alt';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  width:60%;
+  margin:auto;
+  line-height: 49px;
+  color: #1E1E4B;
+  /* text-align:center; */
+}
+.section-three-bigpic svg{
+  /* border:2px solid yellow; */
+  width:500px;
+  height:400px;
+
+
+}
+.third-purple{
+  /* border:2px solid red; */
+  width:100%;
+  padding:8%;
+  /* padding-bottom: 8%; */
+  /* display:none; */
+  position: absolute;
+  top:307px;
+  background-color:#532F82;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:3rem;
+}
+.purple-smallsection{
+  /* border:2px solid blue; */
+  display:grid;
+  grid-template-columns: 40% 80%;
+  width:80%;
+  margin:0 5%;
+}
+.purple-smallsection h3{
+  font-family: 'Circular Std';
+font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 51px;
+/* identical to box height */
+color: #FFFFFF;
+}
+.purple-smallsection p{
+  font-family: 'Circular Std';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 30px;
+color: #ECDDFF;
+}
+.purple-numbers-text{
+  /* border:2px solid black; */
+  text-align: center;
+}
+.purple-aside{
+  font-family: 'Circular Std';
+font-style: normal;
+font-weight: 450;
+font-size: 25px;
+line-height: 139.02%;
+/* or 25px */
+color: #E6D3FF;
+margin-top:4%;
+width:83%;
+/* border:2px solid yellow; */
+margin-left:5%;
+
+}
+.fourth-section{
+  /* border:2px solid green; */
+  padding:0 3%;
+}
+/* .fourth-section-text{
+  border:2px solid yellow;
+} */
+.fourth-section-text h3{
+  font-family: 'Recoleta Alt';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 1%;
+  margin-top:65%;
+  /* identical to box height */
+  text-align: center;
+  color: #1E1E4B;
+  /* border:2px solid yellow; */
+  
+}
+.fourth-section-text p{
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 450;
+  font-size: 25px;
+  line-height: 143.02%;
+  /* or 29px */
+  width:90%;
+  margin:auto;
+  padding-bottom: 5%;
+  text-align: center;
+
+  color: #656565;
+}
+.fourth-section-fours{
+  /* border:2px solid red; */
+  margin-top: 3%;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2.5rem; 
+  padding-bottom: 8%;
+}
+.eachleft{
+  margin-left:15px;
+}
+.fourth-section-each{
+  /* border:2px solid blue; */
+  width:85%;
+  background: #FFFFFF;
+  box-shadow: 2px 4px 10px rgba(200, 200, 200, 0.25);
+  border-radius: 8px;
+  margin:auto;
+}
+.fourth-section-each-pic{
+  background-color: #B7B7D6;
+  display:grid;
+  padding:3% 0;
+  /* border:2px solid red; */
+  border-radius: 8px 8px 0px 0px;
+}
+.fourth-section-each-pic .corner{
+  /* border:2px solid red; */
+  margin-left:80%;
+}
+.fourth-section-each-pic .center{
+  /* border:2px solid yellow; */
+  width:80%;
+  margin:auto;
+}
+.fourth-section-each-text{
+  /* border:2px solid red; */
+  padding:2% 4%;
+}
+.fourth-section-each-text h3{
+  /* border:2px solid yellow; */
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 30px;
+  color: #603F8B;
+}
+.fourth-section-each-text p{
+  /* border:2px solid green; */
+  font-family: 'Circular Std';
+font-style: normal;
+font-weight: 450;
+font-size: 25px;
+line-height: 150%;
+/* or 24px */
+margin:4% 0%;
+color: #6C6C6C;
+
+}
+.fourth-section-each-text .coloured{
+  /* border:2px solid red; */
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 450;
+  font-size: 22px;
+  line-height: 15px;
+  color: #000000;
+  width: 206px;
+  padding:2%;
+  text-align: center;
+  background: #FFE297;
+  border-radius: 4px;
+  text-align: center;
+}
+.fourth-location{
+  /* border:2px solid black; */
+  display:grid;
+ 
+  grid-template-columns: 2fr 10fr;
+}
+.fourth-location svg{
+  margin-top:10px;
+  margin-left:5px;
+  width:116px;
+  height:40px;
+  /* border:2px solid yellow; */
+}
+.fourth-location p{
+  /* border:2px solid blue; */
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 450;
+  font-size: 22px;
+  line-height: 23px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+/* .section-five{
+  border:2px solid red;
+} */
+.section-five-h2{
+  /* border:2px solid green; */
+  font-family: 'Recoleta Alt';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  /* identical to box height */
+  text-align: center;
+  color: #1E1E4B;
+  margin:5% 0; 
+
+
+}
+.section-five-four{
+  /* border:2px solid blue; */
+  display:grid;
+  grid-template-columns: 1fr;
+  padding:3%;
+  gap:2rem;
+}
+.section-five-four-each{
+  /* border:2px solid black; */
+  background: #FFFFFF;
+  box-shadow: 2px 4px 10px rgba(200, 200, 200, 0.25);
+  border-radius: 8px;
+  padding:7%;
+ 
+}
+.section-five-four-each p{
+  /* border:2px solid yellow; */
+  font-family: 'Circular Std';
+  font-style: normal;
+  font-weight: 450;
+  font-size: 24px;
+  line-height: 143.02%;
+  /* or 20px */
+ width:80%;
+ 
+  color: #666666;
+  margin:5% auto;
+}
+.section-five-four-each-top{
+  /* border:2px solid red; */
+  display:grid;
+  width:80%;
+  margin:auto;
+  grid-template-columns: 2fr 9fr;
+}
+.section-five-four-each-top svg{
+  /* border:2px solid yellow; */
+  margin-top:40%;
+  margin-left:20%;
+  width:90px;
+  height:60px;
+}
+.section-five-four-each-top p{
+  /* border:2px solid red; */
+  font-family: 'CircularStd';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 143.02%;
+  /* identical to box height, or 26px */
+  color: #000000;
+  /* padding:0px; */
+  margin-top: 13%;
+  /* margin-bottom: 0px; */
+  width:90%;
+ 
+}
+.pushdown{
+  margin-top:15%;
+  margin-bottom:2%;
+  /* border:2px solid green; */
+}
+.smallie-five{
+  padding:none;
+}
+.showing{
+  display:none;
+}
+}
+
 </style>

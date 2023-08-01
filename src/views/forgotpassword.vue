@@ -1,6 +1,59 @@
 <script setup>
 import footerpage from '@/components/footerpage.vue'
 import whiteNav from '@/components/whiteNav.vue'
+import useValidate from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
+import {reactive, computed} from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const state = reactive({
+    email: '',
+
+
+})
+const rules = computed(() => {
+    return{
+        email:{ required, email },
+        
+    }
+})
+
+const v$ = useValidate( rules, state )
+// console.log(state);
+// return {state, v$ }
+async function signing(v$){
+   const signoption = {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json',
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(state),
+   }
+   const requesting = await fetch('https://testapi.dutiful.ng/v2/auth/password/email',  signoption)
+   const respondoption = await requesting.json();
+   if(  requesting.status == 200){
+    alert("User is Registered")
+    router.push('/otppage')
+   }
+   else {
+    alert("User not Registered")
+   }
+}
+
+async function submitForm(){
+   const result = await v$.value.$validate()
+    if(!v$.value.$error){
+        alert("form submiting")
+        signing(rules)
+       
+    }
+
+   else{
+        alert("form  fail validation")
+    }
+}
 
 </script>
 
@@ -12,16 +65,18 @@ import whiteNav from '@/components/whiteNav.vue'
 
        
         <div class="getstarted-div-form">
-            <form action="" class="getstarted-form">
+            <form action="" class="getstarted-form"  @submit.prevent="submitForm">
                 <label for="" >Email</label>
                 <div class="passwordpart">
-                    <input type="text" >
+                    <input type="email" v-model="state.email" >
                     <svg class="eyes" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.2666 7.06112L12.0012 10.4954C11.194 11.1283 10.0624 11.1283 9.25518 10.4954L4.95312 7.06112" stroke="#A16AE8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.88787 1.5H15.3158C16.6752 1.51525 17.969 2.08993 18.896 3.0902C19.823 4.09048 20.3022 5.42903 20.222 6.79412V13.322C20.3022 14.6871 19.823 16.0256 18.896 17.0259C17.969 18.0262 16.6752 18.6009 15.3158 18.6161H5.88787C2.96796 18.6161 1 16.2407 1 13.322V6.79412C1 3.87545 2.96796 1.5 5.88787 1.5Z" stroke="#A16AE8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                 </div>
-
+                </div>
+                <span v-if="v$.email.$error">
+                    {{ v$.email.$errors[0].$message }}
+                </span>
                 <div class="getstarted-check">
                     <div>
                     <input type="checkbox" class="the-check">
@@ -30,7 +85,7 @@ import whiteNav from '@/components/whiteNav.vue'
                     <p>I agree to Dutiful's <span class="colored-span">terms and conditions</span></p>
                     </div>
                 </div>
-                <button class="getstarted-btn"><RouterLink to="/signup">Sign up</RouterLink></button>
+                <button class="getstarted-btn">Sign up</button>
                 <p class="signing-in">Already have an account? <RouterLink to="/login">Login</RouterLink></p>
 
             </form>
@@ -218,6 +273,18 @@ color: #A3B1BF;
     padding:5% 0;
 
 }
+.signup-message1{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 20px;
+   width:65%;
+   /* margin:auto; */
+   margin-bottom: 3%;
+    color: #686868;
+}
 .signup-message{
     /* border:2px solid yellow; */
     font-family: 'Circular Std';
@@ -385,6 +452,20 @@ color: #A3B1BF;
     width:50px;
     top:18px;
     left:85%;
+}
+}
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .signup-message1{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 20px;
+   width:65%;
+   /* margin:auto; */
+   margin-bottom: 3%;
+    color: #686868;
 }
 }
 </style>

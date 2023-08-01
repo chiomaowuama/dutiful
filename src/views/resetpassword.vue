@@ -384,5 +384,31 @@ color: #A3B1BF;
     top:18px;
     left:85%;
 }
+.signup-message1{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 20px;
+   width:68%;
+   margin:auto;
+     margin-bottom: 3%;
+    color: #686868;
+}
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .signup-message1{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 20px;
+   width:65%;
+   /* margin:auto; */
+   margin-bottom: 3%;
+    color: #686868;
+}
+}
 }
 </style>

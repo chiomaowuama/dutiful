@@ -3,7 +3,11 @@
     <div class="navone"> 
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
-           <i class="bars"><font-awesome-icon icon="fa-solid fa-bars" /></i>
+           <i class="bars"><svg width="40" height="12" viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1H40" stroke="#603F8B" stroke-width="2"/>
+<path d="M0 11H40" stroke="#603F8B" stroke-width="2"/>
+</svg>
+</i>
         </label>
         <label for="" class="logo"><svg width="120" height="55" viewBox="0 0 120 55" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.7628 53.7713H0V23.9667H10.8058C15.3185 23.9667 18.9414 25.3123 21.6746 28.0036C24.4078 30.6948 25.7744 34.3254 25.7744 38.8955C25.7744 43.4655 24.4078 47.0884 21.6746 49.7642C18.9414 52.44 15.3041 53.7757 10.7628 53.7713ZM6.64312 47.5057H10.5111C12.9529 47.5057 14.9498 46.776 16.5018 45.3167C18.0539 43.8574 18.8321 41.7137 18.8365 38.8856C18.8365 36.0287 18.0583 33.8706 16.5018 32.4113C14.9454 30.952 12.9484 30.2223 10.5111 30.2223H6.64312V47.5057Z" fill="#603F8B"/>

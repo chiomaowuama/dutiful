@@ -8,6 +8,7 @@ let blogs = ref(null);
 let search = ref(null);
 let searchresponds = ref([]);
 let rest = ref(null);
+
 // const searchTerm = ref(search.value);
 
 async function blogdetails(){
@@ -19,11 +20,12 @@ async function blogdetails(){
             id: blog.id,
             pictitle: blog.title,
             picture: blog.image,
-            date: blog.created_at,
+            date:blog.created_at,
         }
-
-    })   
-  console.log(blogs);
+      
+    });
+   
+//   console.log(blogdate.value);
 }
 async function searchAll() {
 //   const searchTerm = search.value;
@@ -43,14 +45,6 @@ async function searchAll() {
     const data = await response.json();
     rest.value = data
     
-  
-    // const filteredResults = data.data.filter(searchResponse => {
-     
-    //    return searchResponse.title.toLowerCase().includes(search.toLowerCase());
-   
-    // });
-
-  
     const searchResults = data.data.map(searchResponse => {
       return {
         title: searchResponse.title,
@@ -113,7 +107,7 @@ onMounted(() => {
     <path d="M8.29529 13.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M8.29529 16.7H8.30427" stroke="#A6A6D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <p>24,Aug, 2021</p>
+                            <p>{{ $filters.fullDate(blog.date) }}</p>
                         </div>
                         <div class="bottom-blog2"> 
                             <p>2 mins read</p>
@@ -363,7 +357,7 @@ margin-top:6%;
 }
 .bottom-blog{
     /* border:2px solid red; */
-    margin:5% 0;
+    margin:5% 2%;
     display:flex;
     justify-content:space-between;
     align-content: center;
@@ -416,11 +410,11 @@ margin-top:6%;
     font-style: normal;
     font-weight: 450;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 22px;
     /* or 150% */
     color: #1E1E4B;
     /* border:2px solid yellow; */
-    height:60px;
+    height:65px;
     margin:5%  0;
     padding:0 5%;
 }
@@ -493,7 +487,6 @@ width:170px;
     color: #A6A6D2;
 
 }
-
 .bottom-blog-p1{
     font-family: 'Circular Std';
     font-style: normal;
@@ -521,23 +514,23 @@ width:170px;
     color: #1E1E4B;
 
 }
-.the-menu-bottom-p1{
-    
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 450;
-    font-size: 12px;
-    line-height: 30px;
-    /* or 150% */
-    color: #1E1E4B;
-    border:2px solid yellow;
-    height:110px;
-    width:90%;
-    margin-left:5%;
-    white-space: wrap;
-    padding:0 3%;
-    margin:5% 0;
-}
+            .the-menu-bottom-p1{
+                
+                font-family: 'Circular Std';
+                font-style: normal;
+                font-weight: 450;
+                font-size: 12px;
+                line-height: 30px;
+                /* or 150% */
+                color: #1E1E4B;
+                /* border:2px solid red; */
+                height:110px;
+                width:90%;
+                margin-left:5%;
+                white-space: wrap;
+                padding:0 3%;
+                margin:5% 0;
+            }
 /* the lower batch side  */
 .the-lowerbatch{
     /* border:2px solid green; */
@@ -762,18 +755,19 @@ margin-top:6%;
     color: #1E1E4B;
 
 }
-.the-menu-bottom-p{
-    
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 450;
-    font-size: 17px;
-    line-height: 30px;
-    /* or 150% */
-    color: #1E1E4B;
-    border:2px solid yellow;
-    margin:5% 0;
-    }
+            .the-menu-bottom-p{
+                
+                font-family: 'Circular Std';
+                font-style: normal;
+                font-weight: 450;
+                font-size: 17px;
+                line-height: 23px;
+                /* or 150% */
+                color: #1E1E4B;
+                height:65px;
+                /* border:2px solid red; */
+                margin:5% 0;
+                }
 /* the down menu */
 .blogs-menu1{
     /* border:2px solid yellow; */
@@ -812,13 +806,27 @@ padding:0% 0;
     width:25%;
     /* border:2px solid blue; */
 }
+.bottom-blog{
+    /* border:2px solid green; */
+    margin:5% 0;
+    display:flex;
+    justify-content:space-between;
+    align-content: center;
+    
+}
 .bottom-blog1{
-    /* border:2px solid red; */
-    margin-top:0%;
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    /* justify-content:flex-start; */
-    /* align-content: center; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 1%;
+    gap:2rem;
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    color: #A6A6D2;
 
 }
 .bottom-blog3{
@@ -872,7 +880,7 @@ padding:0% 0;
     line-height: 30px;
     /* or 150% */
     color: #1E1E4B;
-    /* border:2px solid yellow; */
+    border:2px solid yellow;
     margin:5% 0;
     }
 .the-lowerbatch{
@@ -1053,5 +1061,79 @@ margin:5% 0;
     padding-top:1%;
     }
 
+}
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .blogs-menu{
+    /* border:2px solid yellow; */
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:7rem;
+    row-gap:5rem;
+    margin-top:5%;
+
+
+    }
+    .bottom-blog{
+    /* border:2px solid red; */
+    margin:5% 0;
+    display:flex;
+    justify-content:space-between;
+    align-content: center;
+
+    }
+.bottom-blog1{
+    /* border:2px solid yellow; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    color: #A6A6D2;
+
+}
+
+.bottom-blog-p{
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    color: #A6A6D2;
+}
+.bottom-blog2 p{
+    /* border:2px solid yellow; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-right:5px;
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    text-align: right;
+    color: #1E1E4B;
+
+}
+.the-menu-bottom-p{
+                
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 17px;
+    line-height: 23px;
+    /* or 150% */
+    color: #1E1E4B;
+    height:65px;
+    /* border:2px solid red; */
+    margin:5% 0;
+    }
 }
 </style>

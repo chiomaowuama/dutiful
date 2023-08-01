@@ -19,7 +19,11 @@
                 </svg>
             </label>
             <ul>
-                
+                <svg width="35"  class="topsearch" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16.6106" cy="16.611" r="14.9809" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.0298 27.8086L32.9032 33.6667" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
                 <li><RouterLink class="active brown" to="/">Business Directory</RouterLink></li>
                 <li><RouterLink to="/features" class="brown">Features</RouterLink></li>
                 <li><RouterLink to="/pricing" class="brown">Pricing</RouterLink></li>
@@ -47,6 +51,7 @@ body{
     background: #532F82;
     height:70px;
     /* border:2px solid red; */
+    padding-right: 2%;
     position: fixed;
     z-index: 3;
 
@@ -64,21 +69,31 @@ label.logo{
     float:right;
     margin-right:10px;
     margin-top:6px;
+    position:relative
     /* border:2px solid yellow; */
 
   
 }
+.topsearch{
+    /* border:2px solid yellow; */
+   padding-top:10% 20%;
+   position:absolute;
+   left:-30px;
+   top:10px;
+   width:25px;
+}
 .nav ul li{
     display:inline-block;
     line-height: 50px;
-    margin:0 20px;
+    margin:0 5px;
+    
     /* border:2px solid yellow; */
 
 }
 .nav ul li a{
     color:white;
     font-size:17px;
-    padding:8px 15px;
+    padding:8px 25px;
     border-radius:3px;
     font-weight: 500;
     
@@ -136,13 +151,15 @@ a:hover{
     width:100%;
     height:25px;
 }
-.li-border{
-    border:2px solid white;
 
-
-}
 .nav ul li a.brown{
     color:#CAB1EB;
+}
+.li-border {
+    border:2px solid white;
+   padding:0 20%;
+
+
 }
 @media  screen and (max-width:1400px){
     label.logo{

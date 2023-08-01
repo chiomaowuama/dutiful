@@ -20,9 +20,9 @@ import whiteNav from '@/components/whiteNav.vue'
                 </div>
               
 
-                <p class="signup-message2">Enter OTP code that was sent to your email, segunsolaru@gmail.com. 
+                <p class="signup-message3">Enter OTP code that was sent to your email, segunsolaru@gmail.com. 
 .</p>
-                <button class="getstarted-btn"><RouterLink to="/resetpassword">Next</RouterLink></button>
+                <button class="getstarted-btn4"><RouterLink to="/resetpassword">Confirm OTP</RouterLink></button>
             </form>
         </div>
    </div>
@@ -38,7 +38,7 @@ import whiteNav from '@/components/whiteNav.vue'
     /* border:2px solid green; */
     width:90%;
     background-color: #F8F3FF;
-    /* border-radius: 70px; */
+    border-radius: 70px;
     /* margin:auto; */
 }
 .emailimage{
@@ -46,7 +46,7 @@ import whiteNav from '@/components/whiteNav.vue'
     width:80%;
     /* margin-left:10%; */
 }
-.signup-message2{
+.signup-message3{
     /* border:2px solid yellow; */
     font-family: 'Circular Std';
     font-style: normal;
@@ -102,7 +102,7 @@ import whiteNav from '@/components/whiteNav.vue'
     border: 1px solid #603F8B;
 }
 .botton-section-inside1 .click{
-    border:2px solid green;
+    /* border:2px solid green; */
     position: absolute;
     width:25%;
     top:-15px;
@@ -110,7 +110,7 @@ import whiteNav from '@/components/whiteNav.vue'
    display:none
 }
 .botton-section-inside1:hover .click{
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
    display:block;
    border: 1px solid #603F8B;
     
@@ -172,7 +172,10 @@ import whiteNav from '@/components/whiteNav.vue'
     color: #603F8B;
     font-weight: 700;
 }
-.getstarted-btn{
+.getstarted-btn4 a{
+    color: #FFFFFF;
+}
+.getstarted-btn4{
     background: #532F82;
 box-shadow: 2px 8px 8px rgba(86, 86, 86, 0.25);
 border-radius: 6px;
@@ -184,6 +187,7 @@ line-height: 143.02%;
 /* identical to box height, or 26px */
 border:none;
 margin-top:5%;
+width:90%;
 color: #FFFFFF;
 height: 58px;
 /* left: 477px; */
@@ -369,7 +373,7 @@ color: #A3B1BF;
     color: #603F8B;
     font-weight: 700;
 }
-.getstarted-btn{
+.getstarted-btn4{
     background: #532F82;
 box-shadow: 2px 8px 8px rgba(86, 86, 86, 0.25);
 border-radius: 6px;
@@ -385,6 +389,18 @@ color: #FFFFFF;
 height: 58px;
 /* left: 477px; */
 /* top: 1065px; */
+/* border:2px solid red; */
+}
+.getstarted-form-otp input{
+    box-sizing: border-box;
+    /* width: 486px; */
+    height: 60px;
+    outline: none;
+    font-size:20px;
+    background: #F8FAFD;
+    border: 2px solid #E7EAF1;
+    border-radius: 6px;
+    /* border:2px solid green; */
 }
 .signing-in{
     font-family: 'Circular Std';
@@ -401,6 +417,19 @@ color: #A3B1BF;
     color: #603F8B;
     font-weight: 700;
 }
+.signup-message3{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 12px;
+    line-height: 20px;
+   width:90%;
+   text-align: center;
+   /* margin:auto; */
+     margin-bottom: 3%;
+    color: #686868;
+}
 .passwordpart{
     /* border:2px solid green; */
     position: relative;
@@ -411,6 +440,94 @@ color: #A3B1BF;
     width:50px;
     top:18px;
     left:85%;
+}
+.getstarted-form-otp{
+    /* border:2px solid blue; */
+    display:grid;
+    gap:1rem;
+    width:70%;
+    margin:auto;
+}
+.getstarted-form-otp label{
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+    letter-spacing: -0.005em;
+    color: #603F8B;
+    
+}
+.getstarted-form-otp input{
+    box-sizing: border-box;
+    /* width: 486px; */
+    height: 60px;
+    outline: none;
+    font-size:20px;
+    background: #F8FAFD;
+    border: 2px solid #E7EAF1;
+    border-radius: 6px;
+}
+.getstarted-check{
+    /* border:2px solid red; */
+    padding:0;
+    display:grid;
+    grid-template-columns: 1fr 11fr;
+   
+}
+
+.getstarted-check p{
+    /* border:2px solid green; */
+  margin:3% 0
+  
+}
+
+.getstarted-check input{
+    width:20px;
+    /* border:2px solid yellow; */
+    /* margin:0px; */
+}
+}
+@media screen  and (max-width: 1180px) and (min-width: 768px){
+    .getstarted-btn4{
+    background: #532F82;
+box-shadow: 2px 8px 8px rgba(86, 86, 86, 0.25);
+border-radius: 6px;
+font-family: 'Circular Std';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 143.02%;
+/* identical to box height, or 26px */
+border:none;
+margin-top:5%;
+width:90%;
+color: #FFFFFF;
+height: 58px;
+/* left: 477px; */
+/* top: 1065px; */
+}
+.signup-message3{
+    /* border:2px solid yellow; */
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 25px;
+   width:90%;
+   text-align: center;
+   /* margin:auto; */
+     margin-bottom: 3%;
+    color: #686868;
+}
+.getstarted-form-otp{
+    /* border:2px solid blue; */
+    display:grid;
+    gap:1rem;
+    width:70%;
+    margin:auto;
+    margin-bottom: 10%;
 }
 }
 </style>
