@@ -8,7 +8,7 @@ import whiteNav from '@/components/whiteNav.vue'
     <whiteNav/>
    <div class="getting-in-touch">
         <div class="getting-in-touch-first">
-            <h3>Frequentyly Asked Questions</h3>
+            <h3>Frequently Asked Questions</h3>
             <p>Read the responses to some of our most asked questions to learn how Dutiful's unique solution addresses these issues.</p>
         </div>
         <div class="questions-asked">
