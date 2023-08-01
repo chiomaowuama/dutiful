@@ -691,13 +691,13 @@ box-sizing: border-box;
 }
 .each-menu-top{
     /* border:2px solid green; */
-    background: #B7B7D6;
+    background: white;
 border-radius: 6px;
 display:flex;
 justify-content: center;
 align-content: center;
 padding:10% 0;
-width:90%;
+width:85%;
 margin:auto;
 margin-top:6%;
 }
@@ -808,7 +808,8 @@ padding:0% 0;
 }
 .bottom-blog{
     /* border:2px solid green; */
-    margin:5% 0;
+    margin:5% 2%;
+    width:96%;
     display:flex;
     justify-content:space-between;
     align-content: center;
@@ -819,15 +820,15 @@ padding:0% 0;
     justify-content: center;
     align-items: center;
     padding:0 1%;
-    gap:2rem;
+    gap:0.5rem;
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 450;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     /* identical to box height, or 188% */
     color: #A6A6D2;
-
+    /* border: 2px solid red;; */
 }
 .bottom-blog3{
     /* border:2px solid yellow; */

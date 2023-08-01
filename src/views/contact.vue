@@ -127,8 +127,9 @@ color: #FFFFFF;
     box-sizing: border-box;
 height: 167px;
 background: #FFFFFF;
-border: 2px solid #EEEEFF;
+/* border: 2px solid #EEEEFF; */
 border-radius: 12px;
+/* border:2px solid blue; */
 
 
 }
@@ -297,7 +298,7 @@ color: #FFFFFF;
     width:70%;
     margin:auto;
     box-sizing: border-box;
-height: 167px;
+height: 189px;
 background: #FFFFFF;
 border: 2px solid #EEEEFF;
 border-radius: 12px;
@@ -420,7 +421,7 @@ width:100%;
 }
 @media screen  and (max-width: 1180px) and (min-width: 768px){
     .getting-in-touch-first{
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
     background-color: #532F82;
     background-image: url("@/assets/backgroungontouch.png");
     background-size:contain;

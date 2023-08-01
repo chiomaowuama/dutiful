@@ -741,7 +741,7 @@ color: #656565;
 /* the fourth section */
 .the-fourth-about{
   /* border:2px solid green; */
-  width:90%;
+  width:100%;
   display:flex;
   padding:  3% 8%;
   flex-direction:column-reverse;
@@ -760,9 +760,9 @@ color: #656565;
   margin:auto;
   display:flex;
   justify-content:start;
-  gap:1rem;
+  gap:0.5rem;
   padding:2% 5%;
-  font-size:15px;
+  font-size:12px;
   align-items: center;
   background: #FFFFFF;
   border: 2px solid #EEEEFF;
@@ -772,17 +772,19 @@ color: #656565;
 }
 .the-fourth-about-imges-1a img{
   /* border:2px solid yellow; */
-  width:110px;
+  width:90px;
 }
 
 .the-fourth-about-imges-1b .imgg{
-  width:200px;
+  width:100%;
+  /* border:2px solid blue; */
+
 }
 
 .the-fourth-about-imges-2a img{
   /* border:2px solid green; */
   width:150px;
-  margin-top:25%;
+  margin-top:45%;
 }
 .the-fourth-about-text{
   /* border:2px solid green; */

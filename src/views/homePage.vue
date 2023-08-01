@@ -30,6 +30,9 @@ import footerpage from '@/components/footerpage.vue'
             <button>Search</button>
           </div>
         </div>
+        <div class=" hiddenbtn">
+          <button>Search</button>
+        </div>
         <div class="the-search-info">
           <h3>Why list with Dutiful?</h3>
           <svg class="underline" width="219" height="22" viewBox="0 0 219 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -656,6 +659,9 @@ color: #7F6A9B;
   color: #603F8B;
 
 }
+.hiddenbtn{
+  visibility: hidden;
+}
 .the-search-info{
   /* border:2px solid yellow; */
   margin-top:5%;
@@ -1256,6 +1262,7 @@ color: #6C6C6C;
   padding-right:3%;
   display:grid;
   grid-template-columns: 100%;
+  /* border:2px solid yellow; */
   }
 /* .the-leftside{
   border:2px solid yellow;
@@ -1274,7 +1281,7 @@ color: #6C6C6C;
   border-radius:6px;
   margin-top: 15%;
   display:grid;
-  grid-template-columns:repeat(3, 1fr)
+  grid-template-columns:repeat(2, 1fr)
   }
 .search-control{
   /* border:2px solid red; */
@@ -1282,7 +1289,7 @@ color: #6C6C6C;
  justify-content:center;
  align-items:center;
   padding-left:10px;
-  gap:4px;
+  gap:8px;
   
   }
 .search-control p{
@@ -1296,7 +1303,9 @@ align-items:right;
 /* border:2px solid green; */
 color: #7F6A9B;
   }
-
+  .search-btn{
+    display:none;
+  }
 .search-btn button{
   width:100%;
   font-family: 'Circular Std';
@@ -1307,7 +1316,27 @@ color: #7F6A9B;
   padding:10px 15px;
   text-align: center;
   color: #603F8B;
+  border-radius: none;
+  display:none;
   }
+  .hiddenbtn{
+  visibility: visible;
+}
+.hiddenbtn button{
+  display: flex;
+width: 95%;
+margin:5% 2.5%;
+height: 60px;
+padding: 13px 32px;
+justify-content: center;
+align-items: center;
+color: #603F8B;
+font-family: Circular Std;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
 .the-search-info{
   /* border:2px solid yellow; */
   margin-top:5%;
@@ -1372,10 +1401,11 @@ color: #7F6A9B;
   position:absolute;
   width:140px;
   top:150px;
-  left:220px;
+  left:195px;
+  /* display:none; */
 }
 .the-image{
-  width: 340px;
+  width:95%;
   height: 255px;
   margin-left:2.3%;
   position:absolute;
@@ -1500,6 +1530,7 @@ margin:10% auto;
   top:68px;
   left:149px;
   width:110px;
+  display:none;
   }
 .the-under-arrow{
   border:2px solid red;
@@ -1588,8 +1619,9 @@ border:none;
 .purple-smallsection{
   /* border:2px solid blue; */
   display:grid;
-  grid-template-columns: 25% 70%;
-  width:100%;
+
+  grid-template-columns: 20% 70%;
+  width:97%;
   margin:0 0%;
 }
 .purple-smallsection h3{
@@ -1625,9 +1657,9 @@ line-height: 139.02%;
 /* or 25px */
 color: #E6D3FF;
 margin-top:4%;
-width:100%;
+width:95%;
 /* border:2px solid yellow; */
-margin-left:5%;
+margin-left:2%;
 
 }
 

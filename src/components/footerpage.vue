@@ -4,7 +4,7 @@
   <div class="footer-section">
   <div class="footer-one">
     <ul>
-      <li class="footer-one-head">Comapny</li>
+      <li class="footer-one-head">Company</li>
       <li><RouterLink to="/about">About</RouterLink></li>
       <li><RouterLink to="/contact">Contact us</RouterLink></li>
       <li><RouterLink to="/faqs">FAQs</RouterLink></li>
@@ -72,6 +72,7 @@
 .footer-section{
   background: #532F82;
   padding:3%;
+  border:2px solid green;
 }
 .footer-one{
   border: 1px solid #63428E;
@@ -206,10 +207,7 @@ color: #FFFFFF;
     padding-left:20%;
     /* border:2px solid green; */
   }
-  .thereverse-case{
-    display:flex;
-    flex-direction: column-reverse;
-  }
+ 
  
   .footer-right{
   width:25%;
@@ -233,12 +231,12 @@ color: #FFFFFF;
   font-family: 'Circular Std';
   font-style: normal;
   font-weight: 450;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   color: #B6B6E5;
   justify-content: start;
- gap:1rem;
- margin-left:15%;
+ /* gap:0.5rem; */
+ margin-left:10%;
 }
 .footer-double{
   /* border:2px solid yellow; */
