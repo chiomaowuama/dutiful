@@ -72,7 +72,7 @@
 .footer-section{
   background: #532F82;
   padding:3%;
-  border:2px solid green;
+  /* border:2px solid green; */
 }
 .footer-one{
   border: 1px solid #63428E;
